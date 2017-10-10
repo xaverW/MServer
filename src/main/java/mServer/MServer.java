@@ -20,6 +20,8 @@
 package mServer;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import mServer.daten.MserverSearchTask;
 import mServer.search.MserverSearch;
@@ -52,8 +54,17 @@ public class MServer {
         MserverDaten.setBasisVerzeichnis(pfad);
 
         Thread.setDefaultUncaughtExceptionHandler((t, e) -> {
-            MserverLog.fehlerMeldung(97986523, MServer.class.getName(), new String[]{"Da hat sich ein Thread verabschiedet: " + t.getName(), e.getMessage()});
-            e.printStackTrace();
+            
+            List<String> messageContent = new ArrayList<>();
+            messageContent.add("Da hat sich ein Thread verabschiedet: " + t.getName());
+            messageContent.add(e.getMessage());
+            messageContent.add(e.getClass().toString());
+            
+            for(StackTraceElement element:  e.getStackTrace()) {
+                messageContent.add(element.toString());
+            }
+            
+            MserverLog.fehlerMeldung(97986523, MServer.class.getName(), messageContent.toArray(new String[0]));
         });
     }
 
