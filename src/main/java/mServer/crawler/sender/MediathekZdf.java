@@ -52,8 +52,9 @@ public class MediathekZdf extends MediathekReader {
     int days = CrawlerTool.loadLongMax() ? 300 : 20;
 
     try {
+
       final ZDFSearchTask newTask = new ZDFSearchTask(days);
-      forkJoinPool = new ForkJoinPool(Runtime.getRuntime().availableProcessors() * 4);
+      forkJoinPool = MediathekCrawler.createForkJoinPool(getSendername());
       forkJoinPool.execute(newTask);
       Collection<VideoDTO> filmList = newTask.join();
 

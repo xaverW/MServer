@@ -3,9 +3,7 @@ package mServer.crawler.sender.newsearch;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveTask;
-import java.util.stream.Collectors;
 
 import com.google.gson.JsonObject;
 
@@ -13,62 +11,62 @@ import de.mediathekview.mlib.Config;
 import de.mediathekview.mlib.tool.Log;
 import mServer.tool.MserverDaten;
 
-public class ZDFSearchTask extends RecursiveTask<Collection<VideoDTO>>
-{
-    private static final String JSON_ELEMENT_NEXT = "next";
+public class ZDFSearchTask extends RecursiveTask<Collection<VideoDTO>> {
 
-    private static final long serialVersionUID = 1L;
+  private static final String JSON_ELEMENT_NEXT = "next";
 
-    private final Collection<VideoDTO> filmList;
-    private final ZDFClient client;
+  private static final long serialVersionUID = 1L;
 
-    private int page;
-    private final int days;
+  private final Collection<VideoDTO> filmList;
+  private final ZDFClient client;
 
-    public ZDFSearchTask(int aDays)
-    {
-        super();
+  private int page;
+  private final int days;
 
-        filmList = new ArrayList<>();
-        client = new ZDFClient();
-        page = 1;
-        days = aDays;
-    }
+  public ZDFSearchTask(int aDays) {
+    super();
 
-    @Override
-    protected Collection<VideoDTO> compute()
-    {
-        if (!Config.getStop())
-        {
-            try
-            {
-                Collection<ZDFSearchPageTask> subTasks = ConcurrentHashMap.newKeySet();
-                JsonObject baseObject;
+    filmList = new ArrayList<>();
+    client = new ZDFClient();
+    page = 1;
+    days = aDays;
+  }
 
-                do
-                {
-                    baseObject = client.executeSearch(page, days, 1);
+  @Override
+  protected Collection<VideoDTO> compute() {
+    Thread.currentThread().setName("ZDF Pool SearchTask");
 
-                    if (baseObject != null)
-                    {
-                        ZDFSearchPageTask task = new ZDFSearchPageTask(baseObject);
-                        task.fork();
-                        subTasks.add(task);
-                        if (MserverDaten.debug)
-                            Log.sysLog("SearchTask " + task.hashCode() + " added.");
-                    }
+    if (!Config.getStop()) {
+      try {
+        Collection<ZDFSearchPageTask> subTasks = ConcurrentHashMap.newKeySet();
+        JsonObject baseObject;
 
-                    page++;
-                } while (!Config.getStop() && baseObject != null && baseObject.has(JSON_ELEMENT_NEXT));
-                subTasks.forEach(t -> filmList.addAll(t.join()));
-                if (MserverDaten.debug)
-                    Log.sysLog("All SearchTasks finished.");
+        do {
+          baseObject = client.executeSearch(page, days, 1);
 
-            } catch (Exception ex)
-            {
-                Log.errorLog(496583201, ex);
+          if (baseObject != null) {
+            ZDFSearchPageTask task = new ZDFSearchPageTask(baseObject);
+            task.fork();
+            subTasks.add(task);
+
+            if (MserverDaten.debug) {
+              Log.sysLog("SearchTask " + task.hashCode() + " added.");
             }
+          }
+
+          page++;
+        } while (!Config.getStop() && baseObject != null && baseObject.has(JSON_ELEMENT_NEXT));
+
+        subTasks.forEach(t -> filmList.addAll(t.join()));
+
+        if (MserverDaten.debug) {
+          Log.sysLog("All SearchTasks finished.");
         }
-        return filmList;
+
+      } catch (Exception ex) {
+        Log.errorLog(496583201, ex);
+      }
     }
+    return filmList;
+  }
 }
