@@ -35,6 +35,7 @@ public class ZDFEntryTask extends RecursiveTask<VideoDTO> {
 
   @Override
   protected VideoDTO compute() {
+    Thread.currentThread().setName("ZDF Pool EntryTask");
 
     if (zdfEntryDTO == null) {
       return null;

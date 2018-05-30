@@ -30,6 +30,7 @@ public class ZDFSearchTask extends RecursiveTask<Collection<VideoDTO>> {
   private final int daysFuture;
 
   public ZDFSearchTask(int aDaysPast, int aDaysFuture) {
+
     super();
 
     filmList = new ArrayList<>();
@@ -41,6 +42,7 @@ public class ZDFSearchTask extends RecursiveTask<Collection<VideoDTO>> {
 
   @Override
   protected Collection<VideoDTO> compute() {
+    Thread.currentThread().setName("ZDF Pool SearchTask");
     if (!Config.getStop()) {
       try {
         Collection<ZDFSearchPageTask> subTasks = ConcurrentHashMap.newKeySet();
@@ -64,7 +66,6 @@ public class ZDFSearchTask extends RecursiveTask<Collection<VideoDTO>> {
         if (MserverDaten.debug) {
           Log.sysLog("All SearchTasks finished.");
         }
-
       } catch (Exception ex) {
         Log.errorLog(496583201, ex);
       }

@@ -5,6 +5,7 @@ import de.mediathekview.mlib.daten.DatenFilm;
 import de.mediathekview.mlib.tool.Log;
 import java.util.Set;
 import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.ForkJoinWorkerThread;
 import java.util.concurrent.RecursiveTask;
 import java.util.concurrent.TimeUnit;
 import mServer.crawler.FilmeSuchen;
@@ -17,7 +18,20 @@ public abstract class MediathekCrawler extends MediathekReader {
   public MediathekCrawler(FilmeSuchen aMSearchFilmeSuchen, String aSendername, int aSenderMaxThread, int aSenderWartenSeiteLaden, int aStartPrio) {
     super(aMSearchFilmeSuchen, aSendername, aSenderMaxThread, aSenderWartenSeiteLaden, aStartPrio);
 
-    forkJoinPool = new ForkJoinPool(Runtime.getRuntime().availableProcessors() * 4);
+    forkJoinPool = createForkJoinPool(aSendername);
+  }
+
+  public static ForkJoinPool createForkJoinPool(String aSenderName) {
+    final ForkJoinPool.ForkJoinWorkerThreadFactory factory = new ForkJoinPool.ForkJoinWorkerThreadFactory() {
+      @Override
+      public ForkJoinWorkerThread newThread(ForkJoinPool pool) {
+        final ForkJoinWorkerThread worker = ForkJoinPool.defaultForkJoinWorkerThreadFactory.newThread(pool);
+        worker.setName(aSenderName + " Pool Thread-" + worker.getPoolIndex());
+        return worker;
+      }
+    };
+
+    return new ForkJoinPool(Runtime.getRuntime().availableProcessors() * 4, factory, null, false);
   }
 
   @Override
