@@ -1,6 +1,5 @@
 package mServer.crawler.sender.orf;
 
-import de.mediathekview.mlib.Config;
 import de.mediathekview.mlib.Const;
 import de.mediathekview.mlib.daten.DatenFilm;
 import de.mediathekview.mlib.tool.Log;
@@ -10,70 +9,20 @@ import java.time.temporal.ChronoUnit;
 import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
-import java.util.concurrent.TimeUnit;
 import mServer.crawler.CrawlerTool;
 import mServer.crawler.FilmeSuchen;
-import mServer.crawler.sender.MediathekReader;
+import mServer.crawler.sender.MediathekCrawler;
 import mServer.crawler.sender.orf.tasks.OrfDayTask;
 import mServer.crawler.sender.orf.tasks.OrfFilmDetailTask;
 import mServer.crawler.sender.orf.tasks.OrfLetterPageTask;
 
-public class OrfCrawler extends MediathekReader {
+public class OrfCrawler extends MediathekCrawler {
 
   public static final String SENDERNAME = Const.ORF;
 
-  private final ForkJoinPool forkJoinPool;
-
   public OrfCrawler(FilmeSuchen ssearch, int startPrio) {
     super(ssearch, SENDERNAME, 0, 1, startPrio);
-
-    forkJoinPool = new ForkJoinPool(Runtime.getRuntime().availableProcessors() * 4);
-  }
-
-  @Override
-  protected void addToList() {
-    meldungStart();
-
-    try {
-      RecursiveTask<Set<DatenFilm>> filmTask = createCrawlerTask();
-      Set<DatenFilm> films = forkJoinPool.invoke(filmTask);
-
-      Log.sysLog("ORF Filme einsortieren...");
-
-      films.forEach(film -> {
-        if (!Config.getStop()) {
-          addFilm(film);
-        }
-      });
-
-      Log.sysLog("ORF Film einsortieren fertig");
-    } finally {
-      //explicitely shutdown the pool
-      shutdownAndAwaitTermination(forkJoinPool, 60, TimeUnit.SECONDS);
-    }
-
-    Log.sysLog("ORF fertig");
-
-    meldungThreadUndFertig();
-  }
-
-  void shutdownAndAwaitTermination(ExecutorService pool, long delay, TimeUnit delayUnit) {
-    pool.shutdown();
-    Log.sysLog("ORF shutdown pool...");
-    try {
-      if (!pool.awaitTermination(delay, delayUnit)) {
-        pool.shutdownNow();
-        if (!pool.awaitTermination(delay, delayUnit)) {
-          Log.sysLog("ORF: Pool nicht beendet");
-        }
-      }
-    } catch (InterruptedException ie) {
-      pool.shutdownNow();
-      Thread.currentThread().interrupt();
-    }
   }
 
   private Set<TopicUrlDTO> getDaysEntries() throws InterruptedException, ExecutionException {
@@ -109,6 +58,7 @@ public class OrfCrawler extends MediathekReader {
     return shows;
   }
 
+  @Override
   protected RecursiveTask<Set<DatenFilm>> createCrawlerTask() {
 
     final ConcurrentLinkedQueue<TopicUrlDTO> shows = new ConcurrentLinkedQueue<>();
