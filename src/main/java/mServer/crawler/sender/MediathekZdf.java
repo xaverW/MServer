@@ -52,15 +52,20 @@ public class MediathekZdf extends MediathekReader {
     int daysPast = CrawlerTool.loadLongMax() ? 300 : 20;
     int daysFuture = CrawlerTool.loadLongMax() ? 100 : 30;
 
-    final ZDFSearchTask newTask = new ZDFSearchTask(daysPast, daysFuture);
-    forkJoinPool = new ForkJoinPool(Runtime.getRuntime().availableProcessors() * 4);
-    forkJoinPool.execute(newTask);
-    Collection<VideoDTO> filmList = newTask.join();
+    try {
+      final ZDFSearchTask newTask = new ZDFSearchTask(daysPast, daysFuture);
+      forkJoinPool = new ForkJoinPool(Runtime.getRuntime().availableProcessors() * 4);
+      forkJoinPool.execute(newTask);
+      Collection<VideoDTO> filmList = newTask.join();
 
-    convertToDto(filmList);
+      convertToDto(filmList);
 
-    //explicitely shutdown the pool
-    shutdownAndAwaitTermination(forkJoinPool, 60, TimeUnit.SECONDS);
+    } catch (Exception e) {
+      Log.errorLog(516516521, e);
+    } finally {
+      //explicitely shutdown the pool
+      shutdownAndAwaitTermination(forkJoinPool, 60, TimeUnit.SECONDS);
+    }
 
     meldungThreadUndFertig();
   }
@@ -104,17 +109,22 @@ public class MediathekZdf extends MediathekReader {
 
   void shutdownAndAwaitTermination(ExecutorService pool, long delay, TimeUnit delayUnit) {
     Log.sysLog("ZDF shutdown pool...");
-    pool.shutdown();
     try {
-      if (!pool.awaitTermination(delay, delayUnit)) {
-        pool.shutdownNow();
-        if (!pool.awaitTermination(delay, delayUnit)) {
-          Log.sysLog("ZDF: Pool did not terminate");
+      try {
+        forkJoinPool.shutdown();
+        if (!forkJoinPool.awaitTermination(delay, delayUnit)) {
+          forkJoinPool.shutdownNow();
+          if (!forkJoinPool.awaitTermination(delay, delayUnit)) {
+            Log.sysLog("ZDF: Pool nicht beendet");
+          }
         }
+      } catch (InterruptedException ie) {
+        Log.errorLog(974513454, ie);
+        forkJoinPool.shutdownNow();
+        Thread.currentThread().interrupt();
       }
-    } catch (InterruptedException ie) {
-      pool.shutdownNow();
-      Thread.currentThread().interrupt();
+    } catch (Exception e) {
+      Log.errorLog(974513455, e);
     }
   }
 
