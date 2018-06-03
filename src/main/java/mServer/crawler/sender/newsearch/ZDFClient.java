@@ -1,8 +1,5 @@
 package mServer.crawler.sender.newsearch;
 
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.concurrent.TimeUnit;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.sun.jersey.api.client.Client;
@@ -11,6 +8,8 @@ import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.filter.GZIPContentEncodingFilter;
 import de.mediathekview.mlib.Const;
 import de.mediathekview.mlib.tool.Log;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import mServer.crawler.FilmeSuchen;
 import mServer.crawler.RunSender;
 import mServer.tool.MserverDaten;
@@ -60,6 +59,8 @@ public class ZDFClient {
   public ZDFClient() {
     client = Client.create();
     client.addFilter(new GZIPContentEncodingFilter(true));
+    client.setConnectTimeout(60000);
+    client.setReadTimeout(120000);
     gson = new Gson();
   }
 
