@@ -58,7 +58,7 @@ public abstract class MediathekCrawler extends MediathekReader {
     RecursiveTask<Set<DatenFilm>> filmTask = createCrawlerTask();
     Set<DatenFilm> films = forkJoinPool.invoke(filmTask);
 
-    Log.sysLog(getSendername() + ": Filme einsortieren...");
+    Log.sysLog(getSendername() + ": Filme einsortieren..." + films.size());
 
     films.forEach(film -> {
       if (!Config.getStop()) {
