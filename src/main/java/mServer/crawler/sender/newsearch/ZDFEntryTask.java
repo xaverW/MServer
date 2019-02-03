@@ -48,12 +48,15 @@ public class ZDFEntryTask extends RecursiveTask<VideoDTO> {
         // read film details
         String infoUrl = zdfEntryDTO.getEntryGeneralInformationUrl();
         JsonObject baseObjectInfo = client.execute(infoUrl);
+
         if (baseObjectInfo != null) {
           dto = gson.fromJson(baseObjectInfo, VideoDTO.class);
+
           if (dto != null) {
             // read download details
             String downloadUrl = zdfEntryDTO.getEntryDownloadInformationUrl();
             JsonObject baseObjectDownload = client.execute(downloadUrl);
+
             if (baseObjectDownload != null) {
               DownloadDTO downloadDto = gson.fromJson(baseObjectDownload, DownloadDTO.class);
               dto.setDownloadDto(downloadDto);
