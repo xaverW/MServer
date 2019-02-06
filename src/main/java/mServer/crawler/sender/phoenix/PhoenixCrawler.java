@@ -14,6 +14,7 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 import java.util.concurrent.TimeUnit;
 import mServer.crawler.FilmeSuchen;
+import mServer.crawler.sender.MediathekCrawler;
 import mServer.crawler.sender.MediathekReader;
 import mServer.crawler.sender.MediathekZdf;
 import mServer.crawler.sender.base.CrawlerUrlDTO;
@@ -22,80 +23,29 @@ import mServer.crawler.sender.phoenix.tasks.PhoenixOverviewTask;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class PhoenixCrawler extends MediathekReader {
-
-  private static final Logger LOG = LogManager.getLogger(PhoenixCrawler.class);
+public class PhoenixCrawler extends MediathekCrawler {
 
   public static final String SENDERNAME = Const.PHOENIX;
 
-  private final ForkJoinPool forkJoinPool;
-
   public PhoenixCrawler(FilmeSuchen ssearch, int startPrio) {
     super(ssearch, SENDERNAME, 0, 1, startPrio);
-
-    forkJoinPool = new ForkJoinPool(Runtime.getRuntime().availableProcessors() * 4);
   }
 
   @Override
-  protected void addToList() {
-    meldungStart();
-
-    try {
-      RecursiveTask<Set<DatenFilm>> filmTask = createCrawlerTask();
-      Set<DatenFilm> films = forkJoinPool.invoke(filmTask);
-
-      Log.sysLog("PHÖNIX Filme einsortieren...");
-
-      films.forEach(film -> {
-        if (!Config.getStop()) {
-          MediathekZdf.urlTauschen(film, film.getUrl(), mlibFilmeSuchen);
-          addFilm(film);
-        }
-      });
-
-      Log.sysLog("PHÖNIX Film einsortieren fertig");
-    } finally {
-      //explicitely shutdown the pool
-      shutdownAndAwaitTermination(forkJoinPool, 60, TimeUnit.SECONDS);
-    }
-
-    Log.sysLog("PHÖNIX fertig");
-
-    meldungThreadUndFertig();
-  }
-
-  void shutdownAndAwaitTermination(ExecutorService pool, long delay, TimeUnit delayUnit) {
-    pool.shutdown();
-    Log.sysLog("PHÖNIX shutdown pool...");
-    try {
-      if (!pool.awaitTermination(delay, delayUnit)) {
-        pool.shutdownNow();
-        if (!pool.awaitTermination(delay, delayUnit)) {
-          Log.sysLog("PHÖNIX: Pool nicht beendet");
-        }
-      }
-    } catch (InterruptedException ie) {
-      pool.shutdownNow();
-      Thread.currentThread().interrupt();
-    }
-  }
-
   protected RecursiveTask<Set<DatenFilm>> createCrawlerTask() {
     final ConcurrentLinkedQueue<CrawlerUrlDTO> shows = new ConcurrentLinkedQueue<>();
 
     try {
       shows.addAll(getShows());
-
-      Log.sysLog("PHÖNIX Anzahl: " + shows.size());
-
-      meldungAddMax(shows.size());
-
-      return new PhoenixFilmDetailTask(this, shows, Optional.empty(), PhoenixConstants.URL_BASE, PhoenixConstants.URL_VIDEO_DETAILS_HOST);
     } catch (ExecutionException | InterruptedException ex) {
-      LOG.fatal("Exception in Phönix crawler.", ex);
+      Log.errorLog(56146546, ex);
     }
 
-    return null;
+    Log.sysLog("PHÖNIX Anzahl: " + shows.size());
+
+    meldungAddMax(shows.size());
+
+    return new PhoenixFilmDetailTask(this, shows, Optional.empty(), PhoenixConstants.URL_BASE, PhoenixConstants.URL_VIDEO_DETAILS_HOST);
   }
 
   private Collection<CrawlerUrlDTO> getShows() throws ExecutionException, InterruptedException {
