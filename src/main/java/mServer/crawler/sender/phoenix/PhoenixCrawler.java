@@ -1,6 +1,5 @@
 package mServer.crawler.sender.phoenix;
 
-import de.mediathekview.mlib.Config;
 import de.mediathekview.mlib.Const;
 import de.mediathekview.mlib.daten.DatenFilm;
 import de.mediathekview.mlib.tool.Log;
@@ -9,19 +8,12 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
-import java.util.concurrent.TimeUnit;
 import mServer.crawler.FilmeSuchen;
 import mServer.crawler.sender.MediathekCrawler;
-import mServer.crawler.sender.MediathekReader;
-import mServer.crawler.sender.MediathekZdf;
 import mServer.crawler.sender.base.CrawlerUrlDTO;
 import mServer.crawler.sender.phoenix.tasks.PhoenixFilmDetailTask;
 import mServer.crawler.sender.phoenix.tasks.PhoenixOverviewTask;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class PhoenixCrawler extends MediathekCrawler {
 
