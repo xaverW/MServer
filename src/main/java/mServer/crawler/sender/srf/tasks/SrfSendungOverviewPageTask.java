@@ -12,6 +12,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
+import mServer.crawler.CrawlerTool;
 import mServer.crawler.sender.MediathekReader;
 import mServer.crawler.sender.base.AbstractRestTask;
 import mServer.crawler.sender.base.AbstractUrlTask;
@@ -39,8 +40,12 @@ public class SrfSendungOverviewPageTask extends AbstractRestTask<CrawlerUrlDTO, 
     super(aCrawler, aUrlToCrawlDTOs, Optional.empty());
 
     pageNumber = aPageNumber;
-    // TODO Kurz+Lang
-    maxSubPages = 1;
+
+    if (CrawlerTool.loadLongMax()) {
+      maxSubPages = 3;
+    } else {
+      maxSubPages = 1;
+    }
   }
 
   @Override
