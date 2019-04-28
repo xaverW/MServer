@@ -1,11 +1,3 @@
-/*
- * BrGetClipDetailsTaskTest.java
- *
- * Projekt    : MServer
- * erstellt am: 25.12.2017
- * Autor      : Sascha
- *
- */
 package de.mediathekview.mserver.crawler.br.tasks;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -15,18 +7,12 @@ import de.mediathekview.mlib.daten.Film;
 import de.mediathekview.mlib.daten.GeoLocations;
 import de.mediathekview.mlib.daten.Sender;
 import de.mediathekview.mserver.crawler.br.BrCrawler;
-import de.mediathekview.mserver.crawler.br.data.BrClipType;
-import de.mediathekview.mserver.crawler.br.data.BrID;
 import de.mediathekview.mserver.testhelper.AssertFilm;
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Set;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.ExecutionException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -88,7 +74,7 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
           {
             "/myBrRequets",
             "/br/br_film_with_subtitle.json",
-              "av:5acf4af2830ea00017630009",
+            "av:5acf4af2830ea00017630009",
             "Frei Schnauze",
             "Erziehungstipp Hund springt Mensch an",
             LocalDateTime.of(2018, 5, 26, 17, 5, 0),
@@ -107,7 +93,7 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
           {
             "/myBrRequets",
             "/br/br_film_with_geo.json",
-              "av:5c92671b4823a30013753fb6",
+            "av:5c92671b4823a30013753fb6",
             "Es war einmal ... der Mensch",
             "Peter der Große",
             LocalDateTime.of(2019, 4, 27, 15, 0, 0),
@@ -130,12 +116,7 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
 
     BrCrawler crawler = createCrawler();
 
-    ConcurrentLinkedQueue<BrID> clipQueue = new ConcurrentLinkedQueue<>();
-
-    BrID testId = new BrID(BrClipType.PROGRAMME, id);
-    clipQueue.add(testId);
-
-    BrGetClipDetailsTask clipDetails = new BrGetClipDetailsTask(crawler, clipQueue);
+    BrGetClipDetailsTask clipDetails = new BrGetClipDetailsTask(crawler, createClipQueue(id));
 
     Set<Film> resultSet = clipDetails.compute();
 

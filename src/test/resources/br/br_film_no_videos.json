@@ -1,0 +1,103 @@
+{
+  "data":{
+    "viewer":{
+      "clipDetails":{
+        "__typename":"Programme",
+        "id":"av:5a2fb98b69acd400179e99ec",
+        "title":"Das Beste aus \"Franken Helau\" 2017",
+        "kicker":"Frech & Frei | 12.02.2019",
+        "duration":1775,
+        "ageRestriction":null,
+        "description":"2017 war ein Filmteam des Bayerische Rundfunks zu Gast in Marktredwitz bei der Karnevalsgesellschaft Narhalla Rot-Weiß Marktredwitz e. V. Gemeinsam mit der Altneihauser Feierwehrkapell'n blickt das Filmteam zurück auf zahlreiche Künstler aus \"Franken Helau\" 2017:\n\nMit dabei sind unter anderem Cedric Nappert als \"Frankenagent in Ausbildung\" und Margit Lehner beim \"WellnEssen\". Außerdem darf man sich auf ein einmaliges Tanz-Medley von vier Tanzmariechen und zwei Tanzpaaren der Faschingsgilde Marktredwitz-Dörflas und Narhalla Rot-Weiß freuen.\n\nDa ist selbst die Altneihauser Feierwehrkapell'n aus der Oberpfalz überrascht, was Oberfranken so alles drauf hat.",
+        "shortDescription":null,
+        "slug":"frech-und-frei-12022019-das-beste-aus-franken-helau-2017",
+        "availableUntil":"2020-02-12T14:30:00.000Z",
+        "authors":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "subjects":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "tags":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "executiveProducers":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "credits":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "categorizations":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "genres":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "videoFiles":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "captionFiles":{
+          "count":2,
+          "edges":[
+            {
+              "node":{
+                "id":"av:5a70899de077ff00188107d5",
+                "publicLocation":"https://www.br.de/untertitel/3735d8f4-fae1-4110-ada2-ff5b3059a304.ttml"
+              }
+            },
+            {
+              "node":{
+                "id":"av:5a70899de077ff00188107d4",
+                "publicLocation":"https://www.br.de/untertitel/3735d8f4-fae1-4110-ada2-ff5b3059a304.vtt"
+              }
+            }
+          ]
+        },
+        "episodeNumber":null,
+        "episodeOf":{
+          "id":"av:584f4c063b467900117be8fd",
+          "title":"Frech & Frei",
+          "kicker":"Höhepunkte der Fastnacht",
+          "scheduleInfo":null,
+          "shortDescription":"Die Sendung \"Frech & Frei\" spiegelt nicht nur das Geschehen in Veitshöchheim wider, sondern zeigt die Höhepunkte aus dem gesamten fränkischen Fastnachtsprogramm."
+        },
+        "broadcasts":{
+          "edges":[
+            {
+              "node":{
+                "__typename":"BroadcastEvent",
+                "start":"2018-01-30T14:30:00.000Z",
+                "id":"av:5a2fb98b69acd400179e99ec|5c66ce9674ef5500187b483a"
+              }
+            }
+          ]
+        }
+      },
+      "id":"Viewer:__VIEWER"
+    }
+  }
+}
