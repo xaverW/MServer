@@ -5,7 +5,6 @@ import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import de.mediathekview.mlib.daten.Film;
 import de.mediathekview.mlib.daten.FilmUrl;
@@ -262,8 +261,7 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
    */
   @Override
   public Optional<Film> deserialize(
-      JsonElement json, Type typeOfT, JsonDeserializationContext context)
-      throws JsonParseException {
+      JsonElement json, Type typeOfT, JsonDeserializationContext context) {
 
     JsonObject rootObject = json.getAsJsonObject();
 
@@ -276,20 +274,15 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
     if (clipDetails.isPresent()) {
       JsonObject clipDetailRoot = clipDetails.get();
 
-      // Done
       Optional<String> titel = getTitel(clipDetailRoot);
       Optional<String> thema = getThema(clipDetailRoot);
       Optional<LocalDateTime> sendeZeitpunkt = getSendeZeitpunkt(clipDetailRoot);
       Optional<Duration> clipLaenge = getClipLaenge(clipDetailRoot);
-
-      // Todo
       Optional<Set<URL>> subtitles = getSubtitles(clipDetailRoot);
       Optional<Map<Resolution, FilmUrl>> videoUrls = getVideos(clipDetailRoot);
       Collection<GeoLocations> geoLocations = getGeoLocations(videoUrls);
       Optional<String> beschreibung = getBeschreibung(clipDetailRoot);
       Optional<URL> webSite = getWebSite(clipDetailRoot);
-
-      Optional<LocalDateTime> availableUntil = getAvailableUntil(clipDetailRoot);
 
       if (titel.isPresent() && thema.isPresent() && clipLaenge.isPresent()) {
         if (videoUrls.isPresent() && !videoUrls.get().isEmpty()) {
@@ -317,12 +310,6 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
           }
 
           currentFilm.setGeoLocations(geoLocations);
-
-          if (availableUntil.isPresent()) {
-
-            // TODO: Hier wird in Zukunft geprüft wie mit den Filmen umgegangen wird...
-
-          }
 
           return Optional.of(currentFilm);
         }
@@ -430,7 +417,8 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
     }
 
     /*
-     * Wenn wir hier ankommen ist weder episodeOf noch itemOf gefüllt. Dann nehmen wir halt den kicker auch wenn der nicht
+     * Wenn wir hier ankommen ist weder episodeOf noch itemOf gefüllt.
+     * Dann nehmen wir halt den kicker auch wenn der nicht
      * so gut ist ein Thema zu bilden. Aber besser wie gar nichts.
      */
     Optional<JsonPrimitive> kickerElementOptional =
@@ -488,14 +476,8 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
       }
       JsonObject firstItemOfEdge = itemOfEdgesNode.get(0).getAsJsonObject();
 
-      Optional<JsonObject> itemOfNodeOptional =
-          GsonGraphQLHelper.getChildObjectIfExists(
-              firstItemOfEdge, BrGraphQLNodeNames.RESULT_NODE.getName());
-      if (!itemOfNodeOptional.isPresent()) {
-        return Optional.empty();
-      }
-
-      return Optional.of(itemOfNodeOptional.get());
+      return GsonGraphQLHelper.getChildObjectIfExists(
+          firstItemOfEdge, BrGraphQLNodeNames.RESULT_NODE.getName());
     }
 
     return Optional.empty();
@@ -620,7 +602,7 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
 
               JsonObject videoFilesEdgeNode = videoFilesEdgeNodeOptional.get();
 
-              Optional<JsonPrimitive> videoFileURLOptional =
+              Optional<JsonPrimitive> videoFileUrlOptional =
                   GsonGraphQLHelper.getChildPrimitiveIfExists(
                       videoFilesEdgeNode, BrGraphQLElementNames.STRING_CLIP_URL.getName());
 
@@ -643,16 +625,16 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
               if (videoFileProfileNodeOptional.isPresent()) {
                 JsonObject videoFileProfileNode = videoFileProfileNodeOptional.get();
 
-                Optional<JsonPrimitive> videoProfileIDOptional =
+                Optional<JsonPrimitive> videoProfileIdOptional =
                     GsonGraphQLHelper.getChildPrimitiveIfExists(
                         videoFileProfileNode, BrGraphQLElementNames.ID_ELEMENT.getName());
 
-                if (videoFileURLOptional.isPresent() && videoProfileIDOptional.isPresent()) {
+                if (videoFileUrlOptional.isPresent() && videoProfileIdOptional.isPresent()) {
 
-                  JsonPrimitive videoFileURL = videoFileURLOptional.get();
-                  JsonPrimitive videoFileProfile = videoProfileIDOptional.get();
+                  JsonPrimitive videoFileUrl = videoFileUrlOptional.get();
+                  JsonPrimitive videoFileProfile = videoProfileIdOptional.get();
 
-                  if (videoFileURL.isString() && videoFileProfile.isString()) {
+                  if (videoFileUrl.isString() && videoFileProfile.isString()) {
 
                     // Nur hier haben wir sowohl eine gültige URL als auch ein VideoProfil um einen
                     // MapEintrag zu erzeugen!
@@ -661,10 +643,10 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
                         Resolution.getResolutionFromArdAudioVideoOrdinalsByProfileName(
                             videoFileProfile.getAsString());
 
-                    URL videoURL;
+                    URL videoUrl;
                     try {
-                      videoURL = new URL(videoFileURL.getAsString());
-                      FilmUrl filmUrl = new FilmUrl(videoURL, 0L);
+                      videoUrl = new URL(videoFileUrl.getAsString());
+                      FilmUrl filmUrl = new FilmUrl(videoUrl, 0L);
 
                       if (!videoListe.containsKey(resolution)) {
                         videoListe.put(resolution, filmUrl);
@@ -796,24 +778,6 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
 
     if (!subtitleUrls.isEmpty()) {
       return Optional.of(subtitleUrls);
-    }
-
-    return Optional.empty();
-  }
-
-  private Optional<LocalDateTime> getAvailableUntil(JsonObject clipDetailRoot) {
-
-    Optional<JsonPrimitive> availableUntilOptional =
-        GsonGraphQLHelper.getChildPrimitiveIfExists(
-            clipDetailRoot, BrGraphQLElementNames.STRING_CLIP_AVAILABLE_UNTIL.getName());
-    if (!availableUntilOptional.isPresent()) {
-      return Optional.empty();
-    }
-
-    JsonPrimitive availableUntil = availableUntilOptional.get();
-
-    if (availableUntil.isString() && StringUtils.isNoneEmpty(availableUntil.getAsString())) {
-      return Optional.of(brDateTimeString2LocalDateTime(availableUntil.getAsString()));
     }
 
     return Optional.empty();
