@@ -9,6 +9,9 @@
  */
 package de.mediathekview.mserver.crawler.br;
 
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -26,10 +29,10 @@ import de.mediathekview.mserver.crawler.br.graphql.variables.StringVariable;
 import de.mediathekview.mserver.crawler.br.graphql.variables.VariableList;
 
 public class BrGraphQLQueries {
-    
-    
-    
-    private static final String JSON_GRAPHQL_HEADER = "{\"query\":\"";
+
+
+  private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ISO_INSTANT;
+  private static final String JSON_GRAPHQL_HEADER = "{\"query\":\"";
     
     public static String getQuery2GetFilmCount() {
         
@@ -139,7 +142,7 @@ public class BrGraphQLQueries {
       
     }
     
-    public static String getQuery2GetAllClipIds(int clipCount, String cursor) {
+    public static String getQuery2GetAllClipIds(ZonedDateTime minimumAvailableUntil, int clipCount, String cursor) {
       
       BooleanVariable triggerSearchVariable = new BooleanVariable("triggerSearch", true);
       triggerSearchVariable.setAsNotNullableType();
@@ -151,11 +154,15 @@ public class BrGraphQLQueries {
       RecursiveAbstractVariable essencesEmptyEqFalseVariable = new RecursiveAbstractVariable("essences", emptyEqFalseVariable);
       
       RecursiveAbstractVariable audioOnlyEqFalseVariable = new RecursiveAbstractVariable("audioOnly", eqFalseVariable);
-      
+
+      StringVariable gtTodayVariable = new StringVariable("gte", minimumAvailableUntil.format(DATE_FORMATTER));
+      RecursiveAbstractVariable videoAvailableVariable = new RecursiveAbstractVariable("availableUntil", gtTodayVariable);
+
       List<AbstractVariable> clipFilterList = new LinkedList<>();
       clipFilterList.add(audioOnlyEqFalseVariable);
       clipFilterList.add(essencesEmptyEqFalseVariable);
-      
+      clipFilterList.add(videoAvailableVariable);
+
       VariableList clipFilter = new VariableList("clipFilter", clipFilterList);
       
       List<AbstractVariable> variablesList = new LinkedList<>();

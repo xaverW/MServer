@@ -18,13 +18,15 @@ import de.mediathekview.mserver.crawler.br.data.BrClipCollectIDResult;
 import de.mediathekview.mserver.crawler.br.data.BrID;
 import de.mediathekview.mserver.crawler.br.json.BrClipIdsDeserializer;
 import de.mediathekview.mserver.crawler.br.json.BrIdsDTO;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.Callable;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class BrGetClipIDsTask implements Callable<Set<BrID>> {
 
@@ -39,10 +41,12 @@ public class BrGetClipIDsTask implements Callable<Set<BrID>> {
   }
 
   @Override
-  public Set<BrID> call() throws Exception {
+  public Set<BrID> call() {
 
     idCollectResult = new BrClipCollectIDResult();
     idCollectResult.setClipList(new BrIdsDTO());
+
+    ZonedDateTime minimumAvailableUntil = ZonedDateTime.now();
 
     BrWebAccessHelper.handleWebAccessExecution(
         LOG,
@@ -67,7 +71,9 @@ public class BrGetClipIDsTask implements Callable<Set<BrID>> {
                     WebAccessHelper.getJsonResultFromPostAccess(
                         apiUrl.get(),
                         BrGraphQLQueries.getQuery2GetAllClipIds(
-                            startingRequestSize, idCollectResult.getCursor()),
+                            minimumAvailableUntil,
+                            startingRequestSize,
+                            idCollectResult.getCursor()),
                         crawler.getCrawlerConfig().getSocketTimeoutInSeconds());
 
                 idCollectResult = gson.fromJson(response, BrClipCollectIDResult.class);

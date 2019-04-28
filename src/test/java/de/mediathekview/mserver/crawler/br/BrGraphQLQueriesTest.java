@@ -12,6 +12,9 @@ import de.mediathekview.mserver.crawler.br.graphql.AbstractVariable;
 import de.mediathekview.mserver.crawler.br.graphql.variables.BooleanVariable;
 import de.mediathekview.mserver.crawler.br.graphql.variables.StringVariable;
 import de.mediathekview.mserver.crawler.br.graphql.variables.VariableList;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import org.junit.After;
 import org.junit.Test;
 
@@ -34,9 +37,11 @@ public class BrGraphQLQueriesTest {
 
   @Test
   public void testQuery2GetClipIDs() {
-      assertEquals(
-              "{\"query\":\"query MediathekViewGetClipIDs(  $triggerSearch: Boolean!  $clipCount: Int  $clipFilter: ClipFilter) {viewer {    searchAllClips: allClips(first: $clipCount, filter: $clipFilter) @include(if: $triggerSearch) {      count      pageInfo {        hasNextPage      }      edges {        node {          __typename          id        }        cursor      }    }    id  }}\",\"variables\":{\"triggerSearch\":true,\"clipCount\":1000,\"clipFilter\":{\"audioOnly\":{\"eq\":false},\"essences\":{\"empty\":{\"eq\":false}}}}}",
-              BrGraphQLQueries.getQuery2GetAllClipIds(1000, ""));
+    ZonedDateTime dateTime = ZonedDateTime.of(LocalDateTime.of(2019, 4, 28, 13, 5, 22), ZoneId.of("Europe/Berlin"));
+
+    assertEquals(
+        "{\"query\":\"query MediathekViewGetClipIDs(  $triggerSearch: Boolean!  $clipCount: Int  $clipFilter: ClipFilter) {viewer {    searchAllClips: allClips(first: $clipCount, filter: $clipFilter) @include(if: $triggerSearch) {      count      pageInfo {        hasNextPage      }      edges {        node {          __typename          id        }        cursor      }    }    id  }}\",\"variables\":{\"triggerSearch\":true,\"clipCount\":1000,\"clipFilter\":{\"audioOnly\":{\"eq\":false},\"essences\":{\"empty\":{\"eq\":false}},\"availableUntil\":{\"gte\":\"2019-04-28T11:05:22Z\"}}}}",
+        BrGraphQLQueries.getQuery2GetAllClipIds(dateTime, 1000, ""));
   }
 
   @Test
