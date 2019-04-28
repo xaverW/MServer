@@ -352,7 +352,7 @@ public class BrGraphQLQueries {
               , "scheduleInfo"
               , "shortDescription"
               )
-          , addObjectConstruct("broadcasts(first: 1, orderBy: START_DESC)"
+          , addObjectConstruct("broadcasts(first: 1, orderBy: START_ASC)"
               , addObjectConstruct("edges"
                   , addObjectConstruct("node"
                       , "__typename"
