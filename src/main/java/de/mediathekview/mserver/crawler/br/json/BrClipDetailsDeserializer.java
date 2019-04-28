@@ -8,6 +8,7 @@
  */
 package de.mediathekview.mserver.crawler.br.json;
 
+import de.mediathekview.mlib.daten.Sender;
 import java.lang.reflect.Type;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -16,12 +17,14 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
+import mServer.crawler.CrawlerTool;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -288,8 +291,8 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
       
       // Todo
       Optional<Set<URL>>                    subtitles       = getSubtitles(clipDetailRoot);      
-      Optional<Set<GeoLocations>>           geoLocations    = Optional.empty();
       Optional<Map<Resolution, FilmUrl>>    videoUrls       = getVideos(clipDetailRoot);
+      Collection<GeoLocations> geoLocations    = CrawlerTool.getGeoLocations(Sender.BR, videoUrls.get().get(Resolution.NORMAL).toString());
       Optional<String>                      beschreibung    = getBeschreibung(clipDetailRoot);
       Optional<URL>                         webSite         = getWebSite(clipDetailRoot);
       
@@ -311,6 +314,8 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
         if(subtitles.isPresent()) {
           currentFilm.addAllSubtitleUrls(subtitles.get());
         }
+
+        currentFilm.setGeoLocations(geoLocations);
         
         if(availableUntil.isPresent()) {
           

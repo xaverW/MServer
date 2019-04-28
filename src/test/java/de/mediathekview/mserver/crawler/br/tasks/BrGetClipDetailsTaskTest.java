@@ -8,66 +8,153 @@
  */
 package de.mediathekview.mserver.crawler.br.tasks;
 
-import com.github.tomakehurst.wiremock.junit.WireMockRule;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 import de.mediathekview.mlib.daten.Film;
+import de.mediathekview.mlib.daten.GeoLocations;
+import de.mediathekview.mlib.daten.Sender;
 import de.mediathekview.mserver.crawler.br.BrCrawler;
-import de.mediathekview.mserver.crawler.br.BrTestHelper;
 import de.mediathekview.mserver.crawler.br.data.BrClipType;
 import de.mediathekview.mserver.crawler.br.data.BrID;
-import org.junit.Rule;
-
+import de.mediathekview.mserver.testhelper.AssertFilm;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ForkJoinPool;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
-import static com.github.tomakehurst.wiremock.client.WireMock.*;
+@RunWith(Parameterized.class)
+public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
 
-public class BrGetClipDetailsTaskTest {
+  private final String jsonFile;
+  private final String id;
+  private final String expectedTopic;
+  private final String expectedTitle;
+  private final LocalDateTime expectedTime;
+  private final Duration expectedDuration;
+  private final String expectedDescription;
+  private final String expectedWebsite;
+  private final String expectedUrlSmall;
+  private final String expectedUrlNormal;
+  private final String expectedUrlHd;
+  private final String[] expectedSubtitles;
+  private final GeoLocations expectedGeo;
+  private final String requestUrl;
 
-  @Rule
-  public WireMockRule wireMockRule =
-          new WireMockRule(8589); // No-args constructor defaults to port 8080
+  public BrGetClipDetailsTaskTest(
+      final String aRequestUrl,
+      final String aJsonFile,
+      final String aId,
+      final String aExpectedTopic,
+      final String aExpectedTitle,
+      final LocalDateTime aExpectedTime,
+      final Duration aExpectedDuration,
+      final String aExpectedDescription,
+      final String aExpectedWebsite,
+      final String aExpectedUrlSmall,
+      final String aExpectedUrlNormal,
+      final String aExpectedUrlHd,
+      final String[] aExpectedSubtitles,
+      final GeoLocations aExpectedGeo) {
+    requestUrl = aRequestUrl;
+    jsonFile = aJsonFile;
+    id = aId;
+    expectedTopic = aExpectedTopic;
+    expectedTitle = aExpectedTitle;
+    expectedTime = aExpectedTime;
+    expectedDuration = aExpectedDuration;
+    expectedDescription = aExpectedDescription;
+    expectedWebsite = aExpectedWebsite;
+    expectedUrlSmall = aExpectedUrlSmall;
+    expectedUrlNormal = aExpectedUrlNormal;
+    expectedUrlHd = aExpectedUrlHd;
+    expectedSubtitles = aExpectedSubtitles;
+    expectedGeo = aExpectedGeo;
+  }
 
-    // @Test Not yet a Testcase
-    public void test()
-            throws IOException, URISyntaxException, InterruptedException, ExecutionException {
-    ClassLoader classLoader = getClass().getClassLoader();
-        String expectedJSONresult =
-                new String(
-                        Files.readAllBytes(
-                                Paths.get(
-                                        classLoader
-                                                .getResource(
-                                                        "de/mediathekview/mserver/crawler/br/tasks/filmCountResultGraphQL.json")
-                                                .toURI())));
+  @Parameters
+  public static Collection<Object[]> data() {
+    return Arrays.asList(
+        new Object[][] {
+          {
+            "/myBrRequets",
+            "/br/br_film_with_subtitle.json",
+              "av:5acf4af2830ea00017630009",
+            "Frei Schnauze",
+            "Erziehungstipp Hund springt Mensch an",
+            LocalDateTime.of(2018, 5, 26, 17, 5, 0),
+            Duration.ofMinutes(9).plusSeconds(23),
+            "Eines von Lisas Pferden befindet sich auf Abwegen, und die trächtige Stute Linn ist jetzt schon über Termin. Kommt das Fohlen jetzt endlich mal?  Im Beitrag lernen die Zuschauer Ruby kennen. Er ist ein sehr verspielter Hund, der beim Gassigehen fast jeden Menschen auf seine Art begrüßen will. Doch kaum ein Passant versteht Rubys Freude. Immer wieder gibt es deshalb Stress. Nun sucht sein Frauchen \n.....",
+            "https://www.br.de/mediathek/video/frei-schnauze-das-tiermagazin-26052018-erziehungstipp-hund-springt-mensch-an-av:5acf4af2830ea00017630009",
+            "https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9U1S/_-OS/_AFP9-kG571S/22c9ef56-eeb3-4d2a-a603-9eddf63b6303_E.mp4",
+            "https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9U1S/_-OS/_AFP9-kG571S/22c9ef56-eeb3-4d2a-a603-9eddf63b6303_C.mp4",
+            "https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9U1S/_-OS/_AFP9-kG571S/22c9ef56-eeb3-4d2a-a603-9eddf63b6303_X.mp4",
+            new String[] {
+              "https://www.br.de/untertitel/97a833c9-4d78-43d6-af06-f6ac1bedf5d0.ttml",
+              "https://www.br.de/untertitel/97a833c9-4d78-43d6-af06-f6ac1bedf5d0.vtt"
+            },
+            GeoLocations.GEO_NONE
+          },
+          {
+            "/myBrRequets",
+            "/br/br_film_with_geo.json",
+              "av:5c92671b4823a30013753fb6",
+            "Es war einmal ... der Mensch",
+            "Peter der Große",
+            LocalDateTime.of(2019, 4, 27, 15, 0, 0),
+            Duration.ofMinutes(25).plusSeconds(1),
+            "Eine Zeitreise durch die Geschichte der Menschheit in 26 Folgen - das ist die Zeichentrickserie \"Es war einmal … der Mensch\" aus dem Jahr 1978. Unterhaltsam, humorvoll und lehrreich zugleich gibt sie Antworten auf Fragen, wie sie Kinder stellen. Antworten, die, pfiffig präsentiert, auch Erwachsene ansprechen. Erfunden und produziert von dem französischen Regisseur Albert Barillé, war die Serie in \n.....",
+            "https://www.br.de/mediathek/video/es-war-einmal-der-mensch-peter-der-grosse-av:5c92671b4823a30013753fb6",
+            "https://cdn-storage.br.de/geo/b7/2019-04/27/2a4fee2c68ef11e9a0b0984be10adece_E.mp4",
+            "https://cdn-storage.br.de/geo/b7/2019-04/27/2a4fee2c68ef11e9a0b0984be10adece_C.mp4",
+            "https://cdn-storage.br.de/geo/b7/2019-04/27/2a4fee2c68ef11e9a0b0984be10adece_X.mp4",
+            new String[0],
+            GeoLocations.GEO_DE
+          }
+        });
+  }
 
-        wireMockRule.stubFor(
-                post(urlEqualTo("/myBrRequets"))
-                        .willReturn(
-                                aResponse()
-                                        .withHeader("Content-Type", "application/json")
-                                        .withStatus(200)
-                                        .withBody(expectedJSONresult)));
+  @Test
+  public void test() {
 
-    ForkJoinPool mainPool = new ForkJoinPool();
+    setupSuccessfulJsonPostResponse(requestUrl, jsonFile);
 
-    BrCrawler crawler = BrTestHelper.getTestCrawler("MServer-JUnit-Config.yaml", mainPool);
+    BrCrawler crawler = createCrawler();
 
-        ConcurrentLinkedQueue<BrID> clipQueue = new ConcurrentLinkedQueue<>();
+    ConcurrentLinkedQueue<BrID> clipQueue = new ConcurrentLinkedQueue<>();
 
-    BrID testId = new BrID(BrClipType.ITEM, "av:591ab1beea223f001260f462");
-        // BrID testId = new BrID(BrClipType.PROGRAMME, "av:5a0603ce8c16b90012f4bc49");
+    BrID testId = new BrID(BrClipType.PROGRAMME, id);
     clipQueue.add(testId);
 
     BrGetClipDetailsTask clipDetails = new BrGetClipDetailsTask(crawler, clipQueue);
 
-        Set<Film> resultSet = clipDetails.compute();
+    Set<Film> resultSet = clipDetails.compute();
 
-        System.out.println(resultSet.iterator().next());
+    assertThat(resultSet.size(), equalTo(1));
+    final Film actual = resultSet.iterator().next();
+
+    AssertFilm.assertEquals(
+        actual,
+        Sender.BR,
+        expectedTopic,
+        expectedTitle,
+        expectedTime,
+        expectedDuration,
+        expectedDescription,
+        expectedWebsite,
+        new GeoLocations[] {expectedGeo},
+        expectedUrlSmall,
+        expectedUrlNormal,
+        expectedUrlHd,
+        expectedSubtitles);
   }
 }

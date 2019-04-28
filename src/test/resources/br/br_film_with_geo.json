@@ -1,0 +1,220 @@
+{
+  "data":{
+    "viewer":{
+      "clipDetails":{
+        "__typename":"Programme",
+        "id":"av:5c92671b4823a30013753fb6",
+        "title":"Peter der Große",
+        "kicker":"Es war einmal ... der Mensch",
+        "duration":1501,
+        "ageRestriction":null,
+        "description":"Eine Zeitreise durch die Geschichte der Menschheit in 26 Folgen - das ist die Zeichentrickserie \"Es war einmal … der Mensch\" aus dem Jahr 1978. Unterhaltsam, humorvoll und lehrreich zugleich gibt sie Antworten auf Fragen, wie sie Kinder stellen. Antworten, die, pfiffig präsentiert, auch Erwachsene ansprechen. Erfunden und produziert von dem französischen Regisseur Albert Barillé, war die Serie in den 1980er-Jahren so erfolgreich, dass sie in 26 Sprachen übersetzt wurde. Bis 2015 folgten insgesamt sieben Staffeln zu weiteren Wissensthemen. \n\nWie sind die Erde und das Leben auf ihr entstanden? Wie haben die Menschen ihren Alltag organisiert? Welche Erfindungen haben sie gemacht? Wofür haben sie gekämpft? Und was ist in der unvorstellbar langen Zeit bis heute so alles passiert? Antworten darauf hat Maestro, ein weiser alter Mann mit langem, weißem Rauschebart, der ihn fast ganz umhüllt. In den einzelnen Folgen schlüpft er in immer neue Rollen. Mal ist er Philosoph, mal Erfinder, mal Berater. In der deutschen Fassung leiht dem Weisen kein Geringerer als der unvergessene österreichische Jahrhundertschauspieler Josef Meinrad seine Stimme. Durch die Jahrhunderte begleitet wird Maestro von einer kleinen Gruppe wiederkehrender Personen, die typische Vertreter der einzelnen Epochen oder berühmte Persönlichkeiten darstellen. Immer an seiner Seite ist Memory, Uhr und \"Alles-Merker\" mit einem enormen Zahlengedächtnis. Durch das Anzeigen der jeweils aktuellen Jahreszahl sorgt Memory für Orientierung im Lauf der Zeit und muss Maestros Tatendrang hin und wieder auch einbremsen, damit Erfindungen oder Entdeckungen nicht vor ihrer Zeit gemacht werden. \n\nDie Musik zu \"Es war einmal … der Mensch\" komponierte der preisgekrönte französische Filmkomponist Michel Legrand. Im Vor- und Abspann der deutschen Fassung ist der Anfang von Udo Jürgens‘ Lied \"Tausend Jahre sind ein Tag\" zu hören.",
+        "shortDescription":"Wir sind in Florenz, das von Lorenzo Medici regiert und beherrscht wird. In Handel, Gewerbe und Geldverkehr hatten sich Kaufleute und Bankiers von Florenz an die Spitze in Europa gesetzt. Fincino, Arzt und Humanist, unterrichtet an der Platonischen Akademie und übersetzt Platons Schriften.",
+        "slug":"es-war-einmal-der-mensch-peter-der-grosse",
+        "availableUntil":"2019-05-10T13:00:00.000Z",
+        "authors":{
+          "count":1,
+          "edges":[
+            {
+              "node":{
+                "id":"av:5c715909d2b3f10018eb9cff",
+                "name":"Albert Barillé"
+              }
+            }
+          ]
+        },
+        "subjects":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "tags":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "executiveProducers":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "credits":{
+          "count":1,
+          "edges":[
+            {
+              "node":{
+                "id":"av:5c715909d2b3f10018eb9cff",
+                "name":"Albert Barillé"
+              }
+            }
+          ]
+        },
+        "categorizations":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "genres":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "videoFiles":{
+          "count":7,
+          "edges":[
+            {
+              "node":{
+                "id":"av:5cc45903014ac5001380bd1e",
+                "publicLocation":"https://cdn-storage.br.de/geo/b7/2019-04/27/2a4fee2c68ef11e9a0b0984be10adece_X.mp4",
+                "accessibleIn":{
+                  "count":0,
+                  "edges":[
+
+                  ]
+                },
+                "videoProfile":{
+                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_HD",
+                  "height":720,
+                  "width":1280
+                }
+              }
+            },
+            {
+              "node":{
+                "id":"av:5cc45903014ac5001380bd1c",
+                "publicLocation":"https://cdn-storage.br.de/geo/b7/2019-04/27/2a4fee2c68ef11e9a0b0984be10adece_C.mp4",
+                "accessibleIn":{
+                  "count":0,
+                  "edges":[
+
+                  ]
+                },
+                "videoProfile":{
+                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Premium",
+                  "height":540,
+                  "width":969
+                }
+              }
+            },
+            {
+              "node":{
+                "id":"av:5cc45903014ac5001380bd1d",
+                "publicLocation":"https://cdn-storage.br.de/geo/b7/2019-04/27/2a4fee2c68ef11e9a0b0984be10adece_E.mp4",
+                "accessibleIn":{
+                  "count":0,
+                  "edges":[
+
+                  ]
+                },
+                "videoProfile":{
+                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Large",
+                  "height":360,
+                  "width":640
+                }
+              }
+            },
+            {
+              "node":{
+                "id":"av:5cc45903014ac5001380bd1b",
+                "publicLocation":"https://cdn-storage.br.de/geo/b7/2019-04/27/2a4fee2c68ef11e9a0b0984be10adece_B.mp4",
+                "accessibleIn":{
+                  "count":0,
+                  "edges":[
+
+                  ]
+                },
+                "videoProfile":{
+                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Standard",
+                  "height":288,
+                  "width":512
+                }
+              }
+            },
+            {
+              "node":{
+                "id":"av:5cc45903014ac5001380bd1a",
+                "publicLocation":"https://cdn-storage.br.de/geo/b7/2019-04/27/2a4fee2c68ef11e9a0b0984be10adece_A.mp4",
+                "accessibleIn":{
+                  "count":0,
+                  "edges":[
+
+                  ]
+                },
+                "videoProfile":{
+                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Mobile",
+                  "height":270,
+                  "width":480
+                }
+              }
+            },
+            {
+              "node":{
+                "id":"av:5cc45903014ac5001380bd19",
+                "publicLocation":"https://cdn-storage.br.de/geo/b7/2019-04/27/2a4fee2c68ef11e9a0b0984be10adece_0.mp4",
+                "accessibleIn":{
+                  "count":0,
+                  "edges":[
+
+                  ]
+                },
+                "videoProfile":{
+                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Mobile_S",
+                  "height":180,
+                  "width":320
+                }
+              }
+            },
+            {
+              "node":{
+                "id":"av:5cc45903014ac5001380bd1f",
+                "publicLocation":"https://br-i.akamaihd.net/i/geo/b7/2019-04/27/2a4fee2c68ef11e9a0b0984be10adece_,0,A,B,E,C,X,.mp4.csmil/master.m3u8?__b__=200",
+                "accessibleIn":{
+                  "count":0,
+                  "edges":[
+
+                  ]
+                },
+                "videoProfile":{
+                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_HLS",
+                  "height":null,
+                  "width":null
+                }
+              }
+            }
+          ]
+        },
+        "captionFiles":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "episodeNumber":19,
+        "episodeOf":{
+          "id":"av:5c756ebce9f72a0018486fe1",
+          "title":"Es war einmal ... der Mensch",
+          "kicker":"Es war einmal ... der Mensch",
+          "scheduleInfo":null,
+          "shortDescription":"Wie sind die Erde und das Leben auf ihr entstanden? Welche Erfindungen haben die Menschen gemacht? Wofür haben sie gekämpft? Antworten hat Maestro, ein weiser alter Mann mit langem, weißem Rauschebart, der ihn fast ganz umhüllt. "
+        },
+        "broadcasts":{
+          "edges":[
+            {
+              "node":{
+                "__typename":"BroadcastEvent",
+                "start":"2019-04-27T13:00:00.000Z",
+                "id":"av:5c92671b4823a30013753fb6|5cc46086cf372a001a2a26d1"
+              }
+            }
+          ]
+        }
+      },
+      "id":"Viewer:__VIEWER"
+    }
+  }
+}

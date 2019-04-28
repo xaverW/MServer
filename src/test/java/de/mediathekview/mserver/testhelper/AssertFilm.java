@@ -1,15 +1,23 @@
 package de.mediathekview.mserver.testhelper;
 
-import de.mediathekview.mlib.daten.*;
-import org.hamcrest.Matchers;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.junit.Assert.assertThat;
 
+import de.mediathekview.mlib.daten.Film;
+import de.mediathekview.mlib.daten.FilmUrl;
+import de.mediathekview.mlib.daten.GeoLocations;
+import de.mediathekview.mlib.daten.Resolution;
+import de.mediathekview.mlib.daten.Sender;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
-
-import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.assertThat;
 
 public final class AssertFilm {
 
@@ -54,6 +62,88 @@ public final class AssertFilm {
       final String aExpectedUrlHd,
       final String aExpectedSubtitle) {
 
+    List<URL> subtitleUrls = new ArrayList<>();
+    if (!aExpectedSubtitle.isEmpty()) {
+      try {
+        subtitleUrls.add(new URL(aExpectedSubtitle));
+      } catch (MalformedURLException e) {
+        e.printStackTrace();
+      }
+    }
+
+    assertEquals(
+        aActualFilm,
+        aExpectedSender,
+        aExpectedTheme,
+        aExpectedTitle,
+        aExpectedTime,
+        aExpectedDuration,
+        aExpectedDescription,
+        aWebsiteUrl,
+        aExpectedGeo,
+        aExpectedUrlSmall,
+        aExpectedUrlNormal,
+        aExpectedUrlHd,
+        subtitleUrls.toArray(new URL[]{}));
+  }
+
+  public static void assertEquals(
+      final Film aActualFilm,
+      final Sender aExpectedSender,
+      final String aExpectedTheme,
+      final String aExpectedTitle,
+      final LocalDateTime aExpectedTime,
+      final Duration aExpectedDuration,
+      final String aExpectedDescription,
+      final String aWebsiteUrl,
+      final GeoLocations[] aExpectedGeo,
+      final String aExpectedUrlSmall,
+      final String aExpectedUrlNormal,
+      final String aExpectedUrlHd,
+      final String[] aExpectedSubtitles) {
+
+    List<URL> subtitleUrls = new ArrayList<>();
+    for (String aExpectedSubtitle : aExpectedSubtitles) {
+      if (!aExpectedSubtitle.isEmpty()) {
+        try {
+          subtitleUrls.add(new URL(aExpectedSubtitle));
+        } catch (MalformedURLException e) {
+          e.printStackTrace();
+        }
+      }
+    }
+
+    assertEquals(
+        aActualFilm,
+        aExpectedSender,
+        aExpectedTheme,
+        aExpectedTitle,
+        aExpectedTime,
+        aExpectedDuration,
+        aExpectedDescription,
+        aWebsiteUrl,
+        aExpectedGeo,
+        aExpectedUrlSmall,
+        aExpectedUrlNormal,
+        aExpectedUrlHd,
+        subtitleUrls.toArray(new URL[]{}));
+  }
+
+  public static void assertEquals(
+      final Film aActualFilm,
+      final Sender aExpectedSender,
+      final String aExpectedTheme,
+      final String aExpectedTitle,
+      final LocalDateTime aExpectedTime,
+      final Duration aExpectedDuration,
+      final String aExpectedDescription,
+      final String aWebsiteUrl,
+      final GeoLocations[] aExpectedGeo,
+      final String aExpectedUrlSmall,
+      final String aExpectedUrlNormal,
+      final String aExpectedUrlHd,
+      final URL[] aExpectedSubtitles) {
+
     assertEquals(
         aActualFilm,
         aExpectedSender,
@@ -64,17 +154,13 @@ public final class AssertFilm {
         aExpectedDescription,
         aWebsiteUrl);
 
-    assertThat(aActualFilm.getGeoLocations(), Matchers.containsInAnyOrder(aExpectedGeo));
+    assertThat(aActualFilm.getGeoLocations(), containsInAnyOrder(aExpectedGeo));
 
     assertUrl(aExpectedUrlSmall, aActualFilm.getUrl(Resolution.SMALL));
     assertUrl(aExpectedUrlNormal, aActualFilm.getUrl(Resolution.NORMAL));
     assertUrl(aExpectedUrlHd, aActualFilm.getUrl(Resolution.HD));
 
-    assertThat(aActualFilm.hasUT(), equalTo(!aExpectedSubtitle.isEmpty()));
-    if (!aExpectedSubtitle.isEmpty()) {
-      assertThat(
-          aActualFilm.getSubtitles().toArray(new URL[0])[0].toString(), equalTo(aExpectedSubtitle));
-    }
+    assertThat(aActualFilm.getSubtitles(), containsInAnyOrder(aExpectedSubtitles));
   }
 
   public static void assertEquals(
