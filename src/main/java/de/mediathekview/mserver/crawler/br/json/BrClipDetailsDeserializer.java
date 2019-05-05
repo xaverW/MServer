@@ -11,6 +11,7 @@ import de.mediathekview.mlib.daten.FilmUrl;
 import de.mediathekview.mlib.daten.GeoLocations;
 import de.mediathekview.mlib.daten.Resolution;
 import de.mediathekview.mlib.daten.Sender;
+import de.mediathekview.mserver.base.utils.JsonUtils;
 import de.mediathekview.mserver.crawler.basic.AbstractCrawler;
 import de.mediathekview.mserver.crawler.br.data.BrClipType;
 import de.mediathekview.mserver.crawler.br.data.BrGraphQLElementNames;
@@ -498,14 +499,21 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
 
   private Optional<LocalDateTime> getSendeZeitpunkt(JsonObject clipDetailRoot) {
 
+    JsonObject rootNode = clipDetailRoot;
+
     /*
      * Normale ITEMS besitzen keinen Ausstrahlungszeitpunkt, Programme normalerweise schon.
      */
     if (!this.id.getType().equals(BrClipType.PROGRAMME)) {
-      return Optional.empty();
+      Optional<JsonObject> itemOfEdgesNode = getFirstEdgesNode(clipDetailRoot, BrGraphQLNodeNames.RESULT_ITEM_OF.getName());
+      if (!itemOfEdgesNode.isPresent()) {
+        return Optional.empty();
+      }
+
+      rootNode = itemOfEdgesNode.get();
     }
 
-    Optional<JsonObject> broadcastNodeElement = getFirstBroadcastNode(clipDetailRoot);
+    Optional<JsonObject> broadcastNodeElement = getFirstBroadcastNode(rootNode);
     if (broadcastNodeElement.isPresent()) {
       JsonObject broadcastNode = broadcastNodeElement.get();
 
@@ -526,11 +534,49 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
     return Optional.empty();
   }
 
+  private Optional<JsonObject> getFirstEdgesNode(JsonObject clipDetailRoot, String nodeName) {
+    if (!clipDetailRoot.has(nodeName)) {
+      return Optional.empty();
+    }
+
+    JsonElement searchedElement = clipDetailRoot.get(nodeName);
+    Optional<JsonArray> edgesNodeOptional =
+        GsonGraphQLHelper.getChildArrayIfExists(
+            searchedElement.getAsJsonObject(), BrGraphQLNodeNames.RESULT_NODE_EDGES.getName());
+    if (!edgesNodeOptional.isPresent()) {
+      return Optional.empty();
+    }
+    JsonArray edges = edgesNodeOptional.get();
+
+    if (edges.size() == 0) {
+      return Optional.empty();
+    }
+    if (edges.size() >= 1) {
+      if (edges.size() > 1) {
+        LOG.debug("ID hat mehr als einen Node: " + this.id.getId() + " in Element " + nodeName);
+      }
+      JsonObject firstEdgesNode = edges.get(0).getAsJsonObject();
+
+      Optional<JsonObject> nodeElement =
+          GsonGraphQLHelper.getChildObjectIfExists(
+              firstEdgesNode, BrGraphQLNodeNames.RESULT_NODE.getName());
+
+      if (!nodeElement.isPresent()) {
+        return Optional.empty();
+      }
+
+      return Optional.of(nodeElement.get());
+    }
+
+    return Optional.empty();
+  }
+
   private Optional<JsonObject> getFirstBroadcastNode(JsonObject clipDetailRoot) {
 
-    Optional<JsonObject> broadcastBaseNodeOptional =
+    return getFirstEdgesNode(clipDetailRoot, BrGraphQLNodeNames.RESUTL_CLIP_BROADCAST_ROOT.getName());
+    /*Optional<JsonObject> broadcastBaseNodeOptional =
         GsonGraphQLHelper.getChildObjectIfExists(
-            clipDetailRoot, BrGraphQLNodeNames.RESUTL_CLIP_BROADCAST_ROOT.getName());
+            clipDetailRoot, .getName());
     if (!broadcastBaseNodeOptional.isPresent()) {
       return Optional.empty();
     }
@@ -564,7 +610,7 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
       return Optional.of(broadcastNodeElementOptional.get());
     }
 
-    return Optional.empty();
+    return Optional.empty();*/
   }
 
   private Optional<Map<Resolution, FilmUrl>> getVideos(JsonObject clipDetailRoot) {

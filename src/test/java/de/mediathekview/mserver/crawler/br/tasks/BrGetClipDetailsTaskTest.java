@@ -7,6 +7,7 @@ import de.mediathekview.mlib.daten.Film;
 import de.mediathekview.mlib.daten.GeoLocations;
 import de.mediathekview.mlib.daten.Sender;
 import de.mediathekview.mserver.crawler.br.BrCrawler;
+import de.mediathekview.mserver.crawler.br.data.BrClipType;
 import de.mediathekview.mserver.testhelper.AssertFilm;
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -23,6 +24,7 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
 
   private final String jsonFile;
   private final String id;
+  private final BrClipType clipType;
   private final String expectedTopic;
   private final String expectedTitle;
   private final LocalDateTime expectedTime;
@@ -40,6 +42,7 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
       final String aRequestUrl,
       final String aJsonFile,
       final String aId,
+      final BrClipType aClipType,
       final String aExpectedTopic,
       final String aExpectedTitle,
       final LocalDateTime aExpectedTime,
@@ -54,6 +57,7 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
     requestUrl = aRequestUrl;
     jsonFile = aJsonFile;
     id = aId;
+    clipType = aClipType;
     expectedTopic = aExpectedTopic;
     expectedTitle = aExpectedTitle;
     expectedTime = aExpectedTime;
@@ -75,6 +79,7 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
             "/myBrRequets",
             "/br/br_film_with_subtitle.json",
             "av:5acf4af2830ea00017630009",
+              BrClipType.PROGRAMME,
             "Frei Schnauze",
             "Erziehungstipp Hund springt Mensch an",
             LocalDateTime.of(2018, 5, 26, 17, 5, 0),
@@ -94,6 +99,7 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
             "/myBrRequets",
             "/br/br_film_with_geo.json",
             "av:5c92671b4823a30013753fb6",
+              BrClipType.PROGRAMME,
             "Es war einmal ... der Mensch",
             "Peter der Große",
             LocalDateTime.of(2019, 4, 27, 15, 0, 0),
@@ -105,6 +111,23 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
             "https://cdn-storage.br.de/geo/b7/2019-04/27/2a4fee2c68ef11e9a0b0984be10adece_X.mp4",
             new String[0],
             GeoLocations.GEO_DE
+          },
+          {
+            "/myBrRequets",
+            "/br/br_film_item_without_broadcast.json",
+            "av:584f8f1c3b46790011a424b2",
+              BrClipType.ITEM,
+            "Den Religionen auf der Spur",
+            "Bierbrauen in Afrika",
+            LocalDateTime.of(2015, 7, 12, 13, 0, 0),
+            Duration.ofMinutes(13).plusSeconds(35),
+            "Ein großer, tönerner Hirsebierkessel aus Burkina Faso steht im Mittelpunkt dieser Folge der ARD-alpha-Reihe. Was hat er mit Kunst zu tun - und was mit Religion?",
+            "https://www.br.de/mediathek/video/den-religionen-auf-der-spur-bierbrauen-in-afrika-av:584f8f1c3b46790011a424b2",
+            "https://cdn-storage.br.de/MUJIuUOVBwQIbtCCbmCpMX1lBLPGiL1DNA4p_-dS/_AES/_-Nc9moyBKdS/7dc55904-1434-4d4f-b51b-a7c3f566d705_E.mp4",
+            "https://cdn-storage.br.de/MUJIuUOVBwQIbtCCbmCpMX1lBLPGiL1DNA4p_-dS/_AES/_-Nc9moyBKdS/7dc55904-1434-4d4f-b51b-a7c3f566d705_C.mp4",
+            "",
+            new String[0],
+            GeoLocations.GEO_NONE
           }
         });
   }
@@ -116,7 +139,7 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
 
     BrCrawler crawler = createCrawler();
 
-    BrGetClipDetailsTask clipDetails = new BrGetClipDetailsTask(crawler, createClipQueue(id));
+    BrGetClipDetailsTask clipDetails = new BrGetClipDetailsTask(crawler, createClipQueue(id, clipType));
 
     Set<Film> resultSet = clipDetails.compute();
 

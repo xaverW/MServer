@@ -22,6 +22,7 @@ public enum BrGraphQLNodeNames {
   RESULT_CLIP_ITEMOF("itemOf"),
   RESULT_CLIP_VIDEO_FILES("videoFiles"),
   RESULT_CLIP_VIDEO_PROFILE("videoProfile"),
+  RESULT_ITEM_OF("itemOf"),
   RESULT_PAGE_INFO("pageInfo"),
   RESULT_NODE_EDGES("edges"),
   RESULT_NODE("node")

@@ -339,6 +339,7 @@ public class BrGraphQLQueries {
                   , addObjectConstruct("node"
                       , "id"
                       , "title"
+                      , addBroadcastInterface()
                       ))));
     }
     
@@ -352,16 +353,20 @@ public class BrGraphQLQueries {
               , "scheduleInfo"
               , "shortDescription"
               )
-          , addObjectConstruct("broadcasts(first: 1, orderBy: START_ASC)"
-              , addObjectConstruct("edges"
-                  , addObjectConstruct("node"
-                      , "__typename"
-                      , "start"
-                      , "id"
-                      ))));          
+          , addBroadcastInterface());
     }
-    
-    private static String addObjectConstruct(String title, String... subVariables) {
+
+  private static String addBroadcastInterface() {
+    return addObjectConstruct("broadcasts(first: 1, orderBy: START_ASC)"
+        , addObjectConstruct("edges"
+            , addObjectConstruct("node"
+                , "__typename"
+                , "start"
+                , "id"
+            )));
+  }
+
+  private static String addObjectConstruct(String title, String... subVariables) {
       
       StringBuilder sb = new StringBuilder();
       sb.append(" ");

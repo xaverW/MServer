@@ -30,7 +30,7 @@ public class BrGetClipDetailsTaskTestError extends BrTaskTestBase {
     final String requestUrl = "/myBrRequets";
     setupSuccessfulJsonPostResponse(requestUrl, "/br/br_film_no_videos.json");
 
-    BrGetClipDetailsTask clipDetails = new BrGetClipDetailsTask(createCrawler(), createClipQueue("av:5a2fb98b69acd400179e99ec"));
+    BrGetClipDetailsTask clipDetails = new BrGetClipDetailsTask(createCrawler(), createClipQueue("av:5a2fb98b69acd400179e99ec", BrClipType.PROGRAMME));
 
     Set<Film> resultSet = clipDetails.compute();
 

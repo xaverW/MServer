@@ -24,10 +24,10 @@ public class BrTaskTestBase extends WireMockTestBase {
     return new BrCrawler(forkJoinPool, nachrichten, fortschritte, rootConfig);
   }
 
-  protected ConcurrentLinkedQueue<BrID> createClipQueue(String id) {
+  protected ConcurrentLinkedQueue<BrID> createClipQueue(String id, BrClipType type) {
     ConcurrentLinkedQueue<BrID> clipQueue = new ConcurrentLinkedQueue<>();
 
-    BrID testId = new BrID(BrClipType.PROGRAMME, id);
+    BrID testId = new BrID(type, id);
     clipQueue.add(testId);
     return clipQueue;
   }
