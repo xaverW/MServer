@@ -38,6 +38,7 @@ import mServer.crawler.CrawlerTool;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.Nullable;
 
 public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film>> {
 
@@ -374,6 +375,8 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
 
   private Optional<String> getThema(JsonObject clipDetailRoot) {
 
+    Optional<String> topic = Optional.empty();
+
     /*
      * Ist der aktuelle Titel ein Programm wird versucht zu prüfen, ob der aktuelle Titel
      * Teil einer Serie ist und wenn das so ist, den entsprechenden Titel als Thema zurück
@@ -383,38 +386,22 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
       case PROGRAMME:
         Optional<JsonObject> episodeOfNode = getEpisodeOfNode(clipDetailRoot);
         if (episodeOfNode.isPresent()) {
-          JsonObject episodeOf = episodeOfNode.get();
-
-          Optional<JsonPrimitive> episodeOfTitleElementOptional =
-              GsonGraphQLHelper.getChildPrimitiveIfExists(
-                  episodeOf, BrGraphQLElementNames.STRING_CLIP_TITLE.getName());
-          if (episodeOfTitleElementOptional.isPresent()) {
-
-            JsonPrimitive episodeOfTitleElement = episodeOfTitleElementOptional.get();
-
-            return Optional.of(episodeOfTitleElement.getAsString());
-          }
+          topic = getElementOfNode(episodeOfNode.get(), BrGraphQLElementNames.STRING_CLIP_TITLE.getName());
         }
         break;
       case ITEM:
         Optional<JsonObject> itemOfNode = getItemOfNode(clipDetailRoot);
         if (itemOfNode.isPresent()) {
-          JsonObject itemOf = itemOfNode.get();
-
-          Optional<JsonPrimitive> itemOfTitleElementOptional =
-              GsonGraphQLHelper.getChildPrimitiveIfExists(
-                  itemOf, BrGraphQLElementNames.STRING_CLIP_TITLE.getName());
-          if (itemOfTitleElementOptional.isPresent()) {
-
-            JsonPrimitive itemOfTitleElement = itemOfTitleElementOptional.get();
-
-            return Optional.of(itemOfTitleElement.getAsString());
-          }
+          topic = getElementOfNode(itemOfNode.get(), BrGraphQLElementNames.STRING_CLIP_KICKER.getName());
         }
         break;
 
       default:
         break;
+    }
+
+    if (topic.isPresent()) {
+      return topic;
     }
 
     /*
@@ -431,6 +418,21 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
       return Optional.of(kickerElement.getAsString());
     }
 
+    return Optional.empty();
+  }
+
+  @Nullable
+  private Optional<String> getElementOfNode(JsonObject node, final String elementName) {
+
+    Optional<JsonPrimitive> titleElementOptional =
+        GsonGraphQLHelper.getChildPrimitiveIfExists(
+            node, elementName);
+    if (titleElementOptional.isPresent()) {
+
+      JsonPrimitive titleElement = titleElementOptional.get();
+
+      return Optional.of(titleElement.getAsString());
+    }
     return Optional.empty();
   }
 
@@ -535,7 +537,7 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
   }
 
   private Optional<JsonObject> getFirstEdgesNode(JsonObject clipDetailRoot, String nodeName) {
-    if (!clipDetailRoot.has(nodeName)) {
+    if (!clipDetailRoot.has(nodeName) || clipDetailRoot.get(nodeName).isJsonNull()) {
       return Optional.empty();
     }
 
