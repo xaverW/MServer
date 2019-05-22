@@ -79,8 +79,8 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
             "/myBrRequets",
             "/br/br_film_with_subtitle.json",
             "av:5acf4af2830ea00017630009",
-              BrClipType.PROGRAMME,
-            "Frei Schnauze",
+            BrClipType.PROGRAMME,
+            "Frei Schnauze - Das Tiermagazin",
             "Erziehungstipp Hund springt Mensch an",
             LocalDateTime.of(2018, 5, 26, 17, 5, 0),
             Duration.ofMinutes(9).plusSeconds(23),
@@ -99,7 +99,7 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
             "/myBrRequets",
             "/br/br_film_with_geo.json",
             "av:5c92671b4823a30013753fb6",
-              BrClipType.PROGRAMME,
+            BrClipType.PROGRAMME,
             "Es war einmal ... der Mensch",
             "Peter der Große",
             LocalDateTime.of(2019, 4, 27, 15, 0, 0),
@@ -116,7 +116,7 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
             "/myBrRequets",
             "/br/br_film_item_without_broadcast.json",
             "av:584f8f1c3b46790011a424b2",
-              BrClipType.ITEM,
+            BrClipType.ITEM,
             "Den Religionen auf der Spur",
             "Bierbrauen in Afrika",
             LocalDateTime.of(2015, 7, 12, 13, 0, 0),
@@ -126,6 +126,40 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
             "https://cdn-storage.br.de/MUJIuUOVBwQIbtCCbmCpMX1lBLPGiL1DNA4p_-dS/_AES/_-Nc9moyBKdS/7dc55904-1434-4d4f-b51b-a7c3f566d705_E.mp4",
             "https://cdn-storage.br.de/MUJIuUOVBwQIbtCCbmCpMX1lBLPGiL1DNA4p_-dS/_AES/_-Nc9moyBKdS/7dc55904-1434-4d4f-b51b-a7c3f566d705_C.mp4",
             "",
+            new String[0],
+            GeoLocations.GEO_NONE
+          },
+          {
+            "/myBrRequets",
+            "/br/br_film_item_rundschau.json",
+            "av:5ce42fd64c4468001a52459a",
+            BrClipType.ITEM,
+            "Rundschau 18:30",
+            "BR-Korrespondent Michael Mandlik berichtet aus Wien",
+            LocalDateTime.of(2019, 5, 21, 18, 30, 0),
+            Duration.ofMinutes(2).plusSeconds(28),
+            "BR-Korespondent Michael Mandlik schätzt die aktuelle Lage in Österreich ein. Er sieht Bundeskanzler Kurz immer noch als Entscheider und nicht als Getriebenen. Allerdings müsse man das Misstrauenvotum am Montag abwarten. Die SPÖ werde hier das Zünglein an der Waage sein.",
+            "https://www.br.de/mediathek/video/regierungskrise-in-oesterreich-br-korrespondent-michael-mandlik-berichtet-aus-wien-av:5ce42fd64c4468001a52459a",
+            "https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_E.mp4",
+            "https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_C.mp4",
+            "https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_X.mp4",
+            new String[0],
+            GeoLocations.GEO_NONE
+          },
+          {
+            "/myBrRequets",
+            "/br/br_film_program_rundschau.json",
+            "av:5ca71fe6449cde001a66a9aa",
+            BrClipType.PROGRAMME,
+            "Rundschau 18:30",
+            "Weiter angespannte Situation in den Hochwasser-Gebieten",
+            LocalDateTime.of(2019, 5, 21, 18, 30, 0),
+            Duration.ofMinutes(30),
+            "Regierungskrise in Österreich: FPÖ-Minister entlassen +++ Bayerisches Kabinett tagt in Sachsen +++ Landtagspräsidentin Aigner reist nach Tschechien +++ USA gewährt Huawei 90 Tage Aufschub vor Sanktionen +++ Proteste gegen PFC-Verschmutzung in Manching +++ Urteil im Mord-Prozess gegen drei Altenpfleger in Landshut +++ Beginn Medizintechnik-Fachmesse in Nürnberg +++ Landratsamt informiert über PFOS \n.....",
+            "https://www.br.de/mediathek/video/rundschau-1830-21052019-weiter-angespannte-situation-in-den-hochwasser-gebieten-av:5ca71fe6449cde001a66a9aa",
+            "https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_AgH_U1S/08f82f3d-c123-4590-8805-cac4493c6ed1_E.mp4",
+            "https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_AgH_U1S/08f82f3d-c123-4590-8805-cac4493c6ed1_C.mp4",
+            "https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_AgH_U1S/08f82f3d-c123-4590-8805-cac4493c6ed1_X.mp4",
             new String[0],
             GeoLocations.GEO_NONE
           }
@@ -139,7 +173,8 @@ public class BrGetClipDetailsTaskTest extends BrTaskTestBase {
 
     BrCrawler crawler = createCrawler();
 
-    BrGetClipDetailsTask clipDetails = new BrGetClipDetailsTask(crawler, createClipQueue(id, clipType));
+    BrGetClipDetailsTask clipDetails =
+        new BrGetClipDetailsTask(crawler, createClipQueue(id, clipType));
 
     Set<Film> resultSet = clipDetails.compute();
 

@@ -1,937 +1,197 @@
-[
-  {
-    "id":"Footer_livestreamIdQuery",
-    "data":{
-      "viewer":{
-        "allLivestreams":{
-          "edges":[
-            {
-              "node":{
-                "__typename":"Livestream",
-                "id":"av:584f4be43b467900117bdad5"
-              }
-            }
-          ]
-        },
-        "id":"Viewer:__VIEWER"
-      }
-    }
-  },
-  {
-    "id":"DetailPageRendererQuery",
-    "data":{
-      "video":{
+{
+  "data":{
+    "viewer":{
+      "clipDetails":{
         "__typename":"Item",
         "id":"av:5ce42fd64c4468001a52459a",
-        "type":"Item",
         "title":"BR-Korrespondent Michael Mandlik berichtet aus Wien",
-        "ageRestriction":null,
-        "videoFiles":{
-          "edges":[
-            {
-              "node":{
-                "__typename":"VideoFile",
-                "id":"av:5ce42fd64c4468001a524585",
-                "mimetype":null,
-                "publicLocation":"https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_0.mp4",
-                "videoProfile":{
-                  "__typename":"VideoProfile",
-                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Mobile_S",
-                  "width":320,
-                  "height":180
-                },
-                "subtitles":{
-                  "edges":[
-
-                  ]
-                }
-              }
-            },
-            {
-              "node":{
-                "__typename":"VideoFile",
-                "id":"av:5ce42fd64c4468001a524586",
-                "mimetype":null,
-                "publicLocation":"https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_A.mp4",
-                "videoProfile":{
-                  "__typename":"VideoProfile",
-                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Mobile",
-                  "width":480,
-                  "height":270
-                },
-                "subtitles":{
-                  "edges":[
-
-                  ]
-                }
-              }
-            },
-            {
-              "node":{
-                "__typename":"VideoFile",
-                "id":"av:5ce42fd64c4468001a524587",
-                "mimetype":null,
-                "publicLocation":"https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_B.mp4",
-                "videoProfile":{
-                  "__typename":"VideoProfile",
-                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Standard",
-                  "width":512,
-                  "height":288
-                },
-                "subtitles":{
-                  "edges":[
-
-                  ]
-                }
-              }
-            },
-            {
-              "node":{
-                "__typename":"VideoFile",
-                "id":"av:5ce42fd64c4468001a524588",
-                "mimetype":null,
-                "publicLocation":"https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_C.mp4",
-                "videoProfile":{
-                  "__typename":"VideoProfile",
-                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Premium",
-                  "width":969,
-                  "height":540
-                },
-                "subtitles":{
-                  "edges":[
-
-                  ]
-                }
-              }
-            },
-            {
-              "node":{
-                "__typename":"VideoFile",
-                "id":"av:5ce42fd64c4468001a524589",
-                "mimetype":null,
-                "publicLocation":"https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_E.mp4",
-                "videoProfile":{
-                  "__typename":"VideoProfile",
-                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Large",
-                  "width":640,
-                  "height":360
-                },
-                "subtitles":{
-                  "edges":[
-
-                  ]
-                }
-              }
-            },
-            {
-              "node":{
-                "__typename":"VideoFile",
-                "id":"av:5ce42fd64c4468001a52458a",
-                "mimetype":null,
-                "publicLocation":"https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_X.mp4",
-                "videoProfile":{
-                  "__typename":"VideoProfile",
-                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_HD",
-                  "width":1280,
-                  "height":720
-                },
-                "subtitles":{
-                  "edges":[
-
-                  ]
-                }
-              }
-            },
-            {
-              "node":{
-                "__typename":"VideoFile",
-                "id":"av:5ce42fd64c4468001a52458b",
-                "mimetype":null,
-                "publicLocation":"https://br-i.akamaihd.net/i/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_,0,A,B,E,C,X,.mp4.csmil/master.m3u8?__b__=200",
-                "videoProfile":{
-                  "__typename":"VideoProfile",
-                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_HLS",
-                  "width":null,
-                  "height":null
-                },
-                "subtitles":{
-                  "edges":[
-
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "defaultTeaserImage":{
-          "__typename":"Image",
-          "imageFiles":{
-            "edges":[
-              {
-                "node":{
-                  "__typename":"ImageFile",
-                  "id":"av:5ce42fd64c4468001a524592",
-                  "publicLocation":"https://img.br.de/76f3510d-1c96-47ab-9f51-b92648360cb9.jpeg",
-                  "crops":{
-                    "count":null,
-                    "edges":[
-                      {
-                        "node":{
-                          "__typename":"ImageFileCrop",
-                          "publicLocation":"https://img.br.de/76f3510d-1c96-47ab-9f51-b92648360cb9.jpeg?rect=0%2C1%2C1920%2C1078",
-                          "width":1920,
-                          "height":1078,
-                          "id":"av:5ce42fd64c4468001a524592|5ce42fd64c4468001a524598"
-                        }
-                      }
-                    ]
-                  }
-                }
-              }
-            ]
-          },
-          "id":"av:5ce42fd64c4468001a524594",
-          "shortDescription":"BR-Korrespondent Michael Mandlik",
-          "copyright":"Bayerischer Rundfunk 2019"
-        },
-        "myInteractions":null,
         "kicker":"Regierungskrise in Österreich",
-        "slug":"regierungskrise-in-oesterreich-br-korrespondent-michael-mandlik-berichtet-aus-wien",
-        "shortDescription":"BR-Korespondent Michael Mandlik schätzt die aktuelle Lage in Österreich ein. Er sieht Bundeskanzler Kurz immer noch als Entscheider und nicht als Getriebenen. Allerdings müsse man das Misstrauenvotum am Montag abwarten. Die SPÖ werde hier das Zünglein an der Waage sein.",
-        "description":null,
-        "bookmarked":false,
-        "downloadable":false,
-        "reactions":{
-          "likes":0,
-          "dislikes":0
-        },
-        "embeddable":false,
-        "availableUntil":"2019-05-28T17:04:48.000Z",
         "duration":148,
-        "teaserImages":{
+        "ageRestriction":null,
+        "description":null,
+        "shortDescription":"BR-Korespondent Michael Mandlik schätzt die aktuelle Lage in Österreich ein. Er sieht Bundeskanzler Kurz immer noch als Entscheider und nicht als Getriebenen. Allerdings müsse man das Misstrauenvotum am Montag abwarten. Die SPÖ werde hier das Zünglein an der Waage sein.",
+        "slug":"regierungskrise-in-oesterreich-br-korrespondent-michael-mandlik-berichtet-aus-wien",
+        "availableUntil":"2019-05-28T17:04:48.000Z",
+        "authors":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "subjects":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "tags":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "executiveProducers":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "credits":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "categorizations":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "genres":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
+        "videoFiles":{
+          "count":7,
           "edges":[
             {
               "node":{
-                "__typename":"Image",
-                "shortDescription":"BR-Korrespondent Michael Mandlik",
-                "copyright":"Bayerischer Rundfunk 2019",
-                "id":"av:5ce42fd64c4468001a524594"
+                "id":"av:5ce42fd64c4468001a52458a",
+                "publicLocation":"https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_X.mp4",
+                "accessibleIn":{
+                  "count":0,
+                  "edges":[
+
+                  ]
+                },
+                "videoProfile":{
+                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_HD",
+                  "height":720,
+                  "width":1280
+                }
+              }
+            },
+            {
+              "node":{
+                "id":"av:5ce42fd64c4468001a524588",
+                "publicLocation":"https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_C.mp4",
+                "accessibleIn":{
+                  "count":0,
+                  "edges":[
+
+                  ]
+                },
+                "videoProfile":{
+                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Premium",
+                  "height":540,
+                  "width":969
+                }
+              }
+            },
+            {
+              "node":{
+                "id":"av:5ce42fd64c4468001a524589",
+                "publicLocation":"https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_E.mp4",
+                "accessibleIn":{
+                  "count":0,
+                  "edges":[
+
+                  ]
+                },
+                "videoProfile":{
+                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Large",
+                  "height":360,
+                  "width":640
+                }
+              }
+            },
+            {
+              "node":{
+                "id":"av:5ce42fd64c4468001a524587",
+                "publicLocation":"https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_B.mp4",
+                "accessibleIn":{
+                  "count":0,
+                  "edges":[
+
+                  ]
+                },
+                "videoProfile":{
+                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Standard",
+                  "height":288,
+                  "width":512
+                }
+              }
+            },
+            {
+              "node":{
+                "id":"av:5ce42fd64c4468001a524586",
+                "publicLocation":"https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_A.mp4",
+                "accessibleIn":{
+                  "count":0,
+                  "edges":[
+
+                  ]
+                },
+                "videoProfile":{
+                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Mobile",
+                  "height":270,
+                  "width":480
+                }
+              }
+            },
+            {
+              "node":{
+                "id":"av:5ce42fd64c4468001a524585",
+                "publicLocation":"https://cdn-storage.br.de/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_0.mp4",
+                "accessibleIn":{
+                  "count":0,
+                  "edges":[
+
+                  ]
+                },
+                "videoProfile":{
+                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_Mobile_S",
+                  "height":180,
+                  "width":320
+                }
+              }
+            },
+            {
+              "node":{
+                "id":"av:5ce42fd64c4468001a52458b",
+                "publicLocation":"https://br-i.akamaihd.net/i/MUJIuUOVBwQIbtC2uKJDM6OhuLnC_2rc9K1S/_-OS/_ANy_Axf571S/754f70d0-16b0-4d29-853a-9d5dd7bc7590_,0,A,B,E,C,X,.mp4.csmil/master.m3u8?__b__=200",
+                "accessibleIn":{
+                  "count":0,
+                  "edges":[
+
+                  ]
+                },
+                "videoProfile":{
+                  "id":"av:http://ard.de/ontologies/audioVideo#VideoProfile_HLS",
+                  "height":null,
+                  "width":null
+                }
               }
             }
           ]
         },
-        "moreItems":[
-          {
-            "current":false,
-            "node":{
-              "__typename":"Item",
-              "title":"Landtagspräsidium zu Gast im Nachbarland Tschechien",
-              "kicker":"Besuch der Pinka-Synagoge",
-              "duration":96,
-              "id":"av:5ce416ec9f0801001a74bd2e",
-              "teaserImages":{
-                "edges":[
-                  {
-                    "node":{
-                      "__typename":"Image",
-                      "shortDescription":"Delegation des Bayerischen Landtags besucht die Pinka-Synagoge in Prag",
-                      "copyright":"Bayerischer Rundfunk 2019",
-                      "id":"av:5ce416ecac532a001a16f9b2"
-                    }
-                  }
-                ]
-              },
-              "defaultTeaserImage":{
-                "__typename":"Image",
-                "shortDescription":"Delegation des Bayerischen Landtags besucht die Pinka-Synagoge in Prag",
-                "copyright":"Bayerischer Rundfunk 2019",
-                "imageFiles":{
-                  "edges":[
-                    {
-                      "node":{
-                        "__typename":"ImageFile",
-                        "id":"av:5ce416ecac532a001a16f9b1",
-                        "publicLocation":"https://img.br.de/5ab4d6ac-b9f8-48cc-836f-f6e2f454a1ef.jpeg",
-                        "crops":{
-                          "count":null,
-                          "edges":[
-                            {
-                              "node":{
-                                "__typename":"ImageFileCrop",
-                                "publicLocation":"https://img.br.de/5ab4d6ac-b9f8-48cc-836f-f6e2f454a1ef.jpeg?rect=0%2C1%2C1920%2C1078",
-                                "width":1920,
-                                "height":1078,
-                                "id":"av:5ce416ecac532a001a16f9b1|5ce42361e1f42b001aa70df4"
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                "id":"av:5ce416ecac532a001a16f9b2"
-              },
-              "slug":"besuch-der-pinka-synagoge-landtagspraesidium-zu-gast-im-nachbarland-tschechien"
-            }
-          },
-          {
-            "current":false,
-            "node":{
-              "__typename":"Item",
-              "title":"Angespannte Hochwasser-Lage in der Alpenregion",
-              "kicker":"Dauerregen und Schneeschmelze",
-              "duration":103,
-              "id":"av:5ce42d7b852a060019dffc7d",
-              "teaserImages":{
-                "edges":[
-                  {
-                    "node":{
-                      "__typename":"Image",
-                      "shortDescription":"Hochwasser",
-                      "copyright":"Bayerischer Rundfunk 2019",
-                      "id":"av:5ce42d7b852a060019dffc77"
-                    }
-                  }
-                ]
-              },
-              "defaultTeaserImage":{
-                "__typename":"Image",
-                "shortDescription":"Hochwasser",
-                "copyright":"Bayerischer Rundfunk 2019",
-                "imageFiles":{
-                  "edges":[
-                    {
-                      "node":{
-                        "__typename":"ImageFile",
-                        "id":"av:5ce42d7b852a060019dffc75",
-                        "publicLocation":"https://img.br.de/ef91811b-84bb-4c89-848f-4cd2a5061a23.jpeg",
-                        "crops":{
-                          "count":null,
-                          "edges":[
-                            {
-                              "node":{
-                                "__typename":"ImageFileCrop",
-                                "publicLocation":"https://img.br.de/ef91811b-84bb-4c89-848f-4cd2a5061a23.jpeg?rect=0%2C1%2C1920%2C1078",
-                                "width":1920,
-                                "height":1078,
-                                "id":"av:5ce42d7b852a060019dffc75|5ce42d7b852a060019dffc7b"
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                "id":"av:5ce42d7b852a060019dffc77"
-              },
-              "slug":"dauerregen-und-schneeschmelze-angespannte-hochwasser-lage-in-der-alpenregion"
-            }
-          },
-          {
-            "current":false,
-            "node":{
-              "__typename":"Item",
-              "title":"Bundespräsident entlässt alle FPÖ-Minister",
-              "kicker":"Regierungskrise in Österreich",
-              "duration":95,
-              "id":"av:5ce42e2fef839c001a3ed4fa",
-              "teaserImages":{
-                "edges":[
-                  {
-                    "node":{
-                      "__typename":"Image",
-                      "shortDescription":"Österreichs Bundespräsident van der Bellen und Österreichs  Bundeskanzler Kurz",
-                      "copyright":"Bayerischer Rundfunk 2019",
-                      "id":"av:5ce42e2fe1f42b001aa70f40"
-                    }
-                  }
-                ]
-              },
-              "defaultTeaserImage":{
-                "__typename":"Image",
-                "shortDescription":"Österreichs Bundespräsident van der Bellen und Österreichs  Bundeskanzler Kurz",
-                "copyright":"Bayerischer Rundfunk 2019",
-                "imageFiles":{
-                  "edges":[
-                    {
-                      "node":{
-                        "__typename":"ImageFile",
-                        "id":"av:5ce42e2fe1f42b001aa70f3f",
-                        "publicLocation":"https://img.br.de/4ddfa2fb-5a67-4eef-9d1a-9d2eab983720.jpeg",
-                        "crops":{
-                          "count":null,
-                          "edges":[
-                            {
-                              "node":{
-                                "__typename":"ImageFileCrop",
-                                "publicLocation":"https://img.br.de/4ddfa2fb-5a67-4eef-9d1a-9d2eab983720.jpeg?rect=0%2C1%2C1920%2C1078",
-                                "width":1920,
-                                "height":1078,
-                                "id":"av:5ce42e2fe1f42b001aa70f3f|5ce42e2fef839c001a3ed4f8"
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                "id":"av:5ce42e2fe1f42b001aa70f40"
-              },
-              "slug":"regierungskrise-in-oesterreich-bundespraesident-entlaesst-alle-fpoe-minister"
-            }
-          },
-          {
-            "current":false,
-            "node":{
-              "__typename":"Item",
-              "title":"BR-Reporter Martin Breitkopf berichtet aus Murnau",
-              "kicker":"Hochwasser im Oberland",
-              "duration":90,
-              "id":"av:5ce42f22954525001924c290",
-              "teaserImages":{
-                "edges":[
-                  {
-                    "node":{
-                      "__typename":"Image",
-                      "shortDescription":"BR-Reporter Martin Breitkopf",
-                      "copyright":"Bayerischer Rundfunk 2019",
-                      "id":"av:5ce42f21954525001924c28a"
-                    }
-                  }
-                ]
-              },
-              "defaultTeaserImage":{
-                "__typename":"Image",
-                "shortDescription":"BR-Reporter Martin Breitkopf",
-                "copyright":"Bayerischer Rundfunk 2019",
-                "imageFiles":{
-                  "edges":[
-                    {
-                      "node":{
-                        "__typename":"ImageFile",
-                        "id":"av:5ce42f21954525001924c288",
-                        "publicLocation":"https://img.br.de/161022a8-355d-4fbc-98f2-225ee0b5c00b.jpeg",
-                        "crops":{
-                          "count":null,
-                          "edges":[
-                            {
-                              "node":{
-                                "__typename":"ImageFileCrop",
-                                "publicLocation":"https://img.br.de/161022a8-355d-4fbc-98f2-225ee0b5c00b.jpeg?rect=0%2C1%2C1920%2C1078",
-                                "width":1920,
-                                "height":1078,
-                                "id":"av:5ce42f21954525001924c288|5ce42f21954525001924c28e"
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                "id":"av:5ce42f21954525001924c28a"
-              },
-              "slug":"hochwasser-im-oberland-br-reporter-martin-breitkopf-berichtet-aus-murnau"
-            }
-          },
-          {
-            "current":true,
-            "node":{
-              "__typename":"Item",
-              "title":"BR-Korrespondent Michael Mandlik berichtet aus Wien",
-              "kicker":"Regierungskrise in Österreich",
-              "duration":148,
-              "id":"av:5ce42fd64c4468001a52459a",
-              "teaserImages":{
-                "edges":[
-                  {
-                    "node":{
-                      "__typename":"Image",
-                      "shortDescription":"BR-Korrespondent Michael Mandlik",
-                      "copyright":"Bayerischer Rundfunk 2019",
-                      "id":"av:5ce42fd64c4468001a524594"
-                    }
-                  }
-                ]
-              },
-              "defaultTeaserImage":{
-                "__typename":"Image",
-                "shortDescription":"BR-Korrespondent Michael Mandlik",
-                "copyright":"Bayerischer Rundfunk 2019",
-                "imageFiles":{
-                  "edges":[
-                    {
-                      "node":{
-                        "__typename":"ImageFile",
-                        "id":"av:5ce42fd64c4468001a524592",
-                        "publicLocation":"https://img.br.de/76f3510d-1c96-47ab-9f51-b92648360cb9.jpeg",
-                        "crops":{
-                          "count":null,
-                          "edges":[
-                            {
-                              "node":{
-                                "__typename":"ImageFileCrop",
-                                "publicLocation":"https://img.br.de/76f3510d-1c96-47ab-9f51-b92648360cb9.jpeg?rect=0%2C1%2C1920%2C1078",
-                                "width":1920,
-                                "height":1078,
-                                "id":"av:5ce42fd64c4468001a524592|5ce42fd64c4468001a524598"
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                "id":"av:5ce42fd64c4468001a524594"
-              },
-              "slug":"regierungskrise-in-oesterreich-br-korrespondent-michael-mandlik-berichtet-aus-wien"
-            }
-          },
-          {
-            "current":false,
-            "node":{
-              "__typename":"Item",
-              "title":"Bayerische Staatsregierung tagt in Sachsen",
-              "kicker":"Zwei Freistaaten an einem Tisch",
-              "duration":86,
-              "id":"av:5ce43011d1b9f8001a65f539",
-              "teaserImages":{
-                "edges":[
-                  {
-                    "node":{
-                      "__typename":"Image",
-                      "shortDescription":"Die Ministerpräsidenten von Bayern und Sachsen",
-                      "copyright":"Bayerischer Rundfunk 2019",
-                      "id":"av:5ce43011d1b9f8001a65f533"
-                    }
-                  }
-                ]
-              },
-              "defaultTeaserImage":{
-                "__typename":"Image",
-                "shortDescription":"Die Ministerpräsidenten von Bayern und Sachsen",
-                "copyright":"Bayerischer Rundfunk 2019",
-                "imageFiles":{
-                  "edges":[
-                    {
-                      "node":{
-                        "__typename":"ImageFile",
-                        "id":"av:5ce43011d1b9f8001a65f532",
-                        "publicLocation":"https://img.br.de/f4e626b9-b6d9-46ff-a978-aae4ef8e6ce3.jpeg",
-                        "crops":{
-                          "count":null,
-                          "edges":[
-                            {
-                              "node":{
-                                "__typename":"ImageFileCrop",
-                                "publicLocation":"https://img.br.de/f4e626b9-b6d9-46ff-a978-aae4ef8e6ce3.jpeg?rect=0%2C1%2C1920%2C1078",
-                                "width":1920,
-                                "height":1078,
-                                "id":"av:5ce43011d1b9f8001a65f532|5ce43011d1b9f8001a65f537"
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                "id":"av:5ce43011d1b9f8001a65f533"
-              },
-              "slug":"zwei-freistaaten-an-einem-tisch-bayerische-staatsregierung-tagt-in-sachsen"
-            }
-          },
-          {
-            "current":false,
-            "node":{
-              "__typename":"Item",
-              "title":"Bundesumweltministerin stellt Ideen gegen die Müllberge vor",
-              "kicker":"Weg vom Einwegbecher",
-              "duration":98,
-              "id":"av:5ce430c5954525001924c2d1",
-              "teaserImages":{
-                "edges":[
-                  {
-                    "node":{
-                      "__typename":"Image",
-                      "shortDescription":"Mehrwegbecher",
-                      "copyright":"Bayerischer Rundfunk 2019",
-                      "id":"av:5ce430c5954525001924c2ca"
-                    }
-                  }
-                ]
-              },
-              "defaultTeaserImage":{
-                "__typename":"Image",
-                "shortDescription":"Mehrwegbecher",
-                "copyright":"Bayerischer Rundfunk 2019",
-                "imageFiles":{
-                  "edges":[
-                    {
-                      "node":{
-                        "__typename":"ImageFile",
-                        "id":"av:5ce430c5954525001924c2c8",
-                        "publicLocation":"https://img.br.de/35e9cd6a-7894-4f89-9d21-d43ae2ef5c18.jpeg",
-                        "crops":{
-                          "count":null,
-                          "edges":[
-                            {
-                              "node":{
-                                "__typename":"ImageFileCrop",
-                                "publicLocation":"https://img.br.de/35e9cd6a-7894-4f89-9d21-d43ae2ef5c18.jpeg?rect=0%2C1%2C1920%2C1078",
-                                "width":1920,
-                                "height":1078,
-                                "id":"av:5ce430c5954525001924c2c8|5ce430c5954525001924c2cf"
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                "id":"av:5ce430c5954525001924c2ca"
-              },
-              "slug":"weg-vom-einwegbecher-bundesumweltministerin-stellt-ideen-gegen-die-muellberge-vor"
-            }
-          },
-          {
-            "current":false,
-            "node":{
-              "__typename":"Item",
-              "title":"Ausstellung \"Body Check\" im Münchner Lenbachhaus",
-              "kicker":"Berührende Selbsterkundungen",
-              "duration":109,
-              "id":"av:5ce4350090b44e001a25726b",
-              "teaserImages":{
-                "edges":[
-                  {
-                    "node":{
-                      "__typename":"Image",
-                      "shortDescription":"Ausstellung \"Body Check\" im Münchner Lenbachhaus",
-                      "copyright":"Bayerischer Rundfunk 2019",
-                      "id":"av:5ce4350090b44e001a257265"
-                    }
-                  }
-                ]
-              },
-              "defaultTeaserImage":{
-                "__typename":"Image",
-                "shortDescription":"Ausstellung \"Body Check\" im Münchner Lenbachhaus",
-                "copyright":"Bayerischer Rundfunk 2019",
-                "imageFiles":{
-                  "edges":[
-                    {
-                      "node":{
-                        "__typename":"ImageFile",
-                        "id":"av:5ce4350090b44e001a257263",
-                        "publicLocation":"https://img.br.de/388418f3-3642-477c-938d-fcc4faed1f15.jpeg",
-                        "crops":{
-                          "count":null,
-                          "edges":[
-                            {
-                              "node":{
-                                "__typename":"ImageFileCrop",
-                                "publicLocation":"https://img.br.de/388418f3-3642-477c-938d-fcc4faed1f15.jpeg?rect=0%2C1%2C1920%2C1078",
-                                "width":1920,
-                                "height":1078,
-                                "id":"av:5ce4350090b44e001a257263|5ce4350090b44e001a257269"
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                "id":"av:5ce4350090b44e001a257265"
-              },
-              "slug":"beruehrende-selbsterkundungen-ausstellung-body-check-im-muenchner-lenbachhaus"
-            }
-          },
-          {
-            "current":false,
-            "node":{
-              "__typename":"Item",
-              "title":"70 Jahre Institut für Zeitgeschichte",
-              "kicker":"Jubiläum",
-              "duration":108,
-              "id":"av:5ce435009f0801001a74c639",
-              "teaserImages":{
-                "edges":[
-                  {
-                    "node":{
-                      "__typename":"Image",
-                      "shortDescription":"Institut für Zeitgeschichte",
-                      "copyright":"Bayerischer Rundfunk 2019",
-                      "id":"av:5ce435009f0801001a74c633"
-                    }
-                  }
-                ]
-              },
-              "defaultTeaserImage":{
-                "__typename":"Image",
-                "shortDescription":"Institut für Zeitgeschichte",
-                "copyright":"Bayerischer Rundfunk 2019",
-                "imageFiles":{
-                  "edges":[
-                    {
-                      "node":{
-                        "__typename":"ImageFile",
-                        "id":"av:5ce435009f0801001a74c631",
-                        "publicLocation":"https://img.br.de/8e7568ed-68b2-4fd4-96be-78c3ef957927.jpeg",
-                        "crops":{
-                          "count":null,
-                          "edges":[
-                            {
-                              "node":{
-                                "__typename":"ImageFileCrop",
-                                "publicLocation":"https://img.br.de/8e7568ed-68b2-4fd4-96be-78c3ef957927.jpeg?rect=0%2C1%2C1920%2C1078",
-                                "width":1920,
-                                "height":1078,
-                                "id":"av:5ce435009f0801001a74c631|5ce435009f0801001a74c637"
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                "id":"av:5ce435009f0801001a74c633"
-              },
-              "slug":"jubilaeum-70-jahre-institut-fuer-zeitgeschichte"
-            }
-          },
-          {
-            "current":false,
-            "node":{
-              "__typename":"Item",
-              "title":"Manchinger Bürger beunruhigt",
-              "kicker":"PFC-Verunreinigung am alten Militärflughafen",
-              "duration":37,
-              "id":"av:5ce43579e1f42b001aa70f87",
-              "teaserImages":{
-                "edges":[
-                  {
-                    "node":{
-                      "__typename":"Image",
-                      "shortDescription":"alter MIlitärflughafen Manching",
-                      "copyright":"Bayerischer Rundfunk 2019",
-                      "id":"av:5ce43579e1f42b001aa70f81"
-                    }
-                  }
-                ]
-              },
-              "defaultTeaserImage":{
-                "__typename":"Image",
-                "shortDescription":"alter MIlitärflughafen Manching",
-                "copyright":"Bayerischer Rundfunk 2019",
-                "imageFiles":{
-                  "edges":[
-                    {
-                      "node":{
-                        "__typename":"ImageFile",
-                        "id":"av:5ce43579e1f42b001aa70f7f",
-                        "publicLocation":"https://img.br.de/e1ccd701-146f-4ffb-837b-ee301ee738ee.jpeg",
-                        "crops":{
-                          "count":null,
-                          "edges":[
-                            {
-                              "node":{
-                                "__typename":"ImageFileCrop",
-                                "publicLocation":"https://img.br.de/e1ccd701-146f-4ffb-837b-ee301ee738ee.jpeg?rect=0%2C1%2C1920%2C1078",
-                                "width":1920,
-                                "height":1078,
-                                "id":"av:5ce43579e1f42b001aa70f7f|5ce43579e1f42b001aa70f85"
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                "id":"av:5ce43579e1f42b001aa70f81"
-              },
-              "slug":"pfc-verunreinigung-am-alten-militaerflughafen-manchinger-buerger-beunruhigt"
-            }
-          },
-          {
-            "current":false,
-            "node":{
-              "__typename":"Item",
-              "title":"US-Regierung gewährt Aufschub",
-              "kicker":"Huawei",
-              "duration":50,
-              "id":"av:5ce436a5ef839c001a3ed544",
-              "teaserImages":{
-                "edges":[
-                  {
-                    "node":{
-                      "__typename":"Image",
-                      "shortDescription":"Huawei",
-                      "copyright":"Bayerischer Rundfunk 2019",
-                      "id":"av:5ce436a5ef839c001a3ed53e"
-                    }
-                  }
-                ]
-              },
-              "defaultTeaserImage":{
-                "__typename":"Image",
-                "shortDescription":"Huawei",
-                "copyright":"Bayerischer Rundfunk 2019",
-                "imageFiles":{
-                  "edges":[
-                    {
-                      "node":{
-                        "__typename":"ImageFile",
-                        "id":"av:5ce436a5ef839c001a3ed53d",
-                        "publicLocation":"https://img.br.de/f7e7e95c-0f9e-4568-ad05-6d6fc0259ba1.jpeg",
-                        "crops":{
-                          "count":null,
-                          "edges":[
-                            {
-                              "node":{
-                                "__typename":"ImageFileCrop",
-                                "publicLocation":"https://img.br.de/f7e7e95c-0f9e-4568-ad05-6d6fc0259ba1.jpeg?rect=0%2C1%2C1920%2C1078",
-                                "width":1920,
-                                "height":1078,
-                                "id":"av:5ce436a5ef839c001a3ed53d|5ce436a5ef839c001a3ed542"
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                "id":"av:5ce436a5ef839c001a3ed53e"
-              },
-              "slug":"huawei-us-regierung-gewaehrt-aufschub"
-            }
-          },
-          {
-            "current":false,
-            "node":{
-              "__typename":"Item",
-              "title":"Neues aus den Regionen",
-              "kicker":"Bayern",
-              "duration":98,
-              "id":"av:5ce43795ef839c001a3ed579",
-              "teaserImages":{
-                "edges":[
-                  {
-                    "node":{
-                      "__typename":"Image",
-                      "shortDescription":"Urteil gegen Altenpfleger in Landshut",
-                      "copyright":"Bayerischer Rundfunk 2019",
-                      "id":"av:5ce43795ef839c001a3ed572"
-                    }
-                  }
-                ]
-              },
-              "defaultTeaserImage":{
-                "__typename":"Image",
-                "shortDescription":"Urteil gegen Altenpfleger in Landshut",
-                "copyright":"Bayerischer Rundfunk 2019",
-                "imageFiles":{
-                  "edges":[
-                    {
-                      "node":{
-                        "__typename":"ImageFile",
-                        "id":"av:5ce43795ef839c001a3ed570",
-                        "publicLocation":"https://img.br.de/6151c502-4a45-45fa-8255-7ea4372b3f4c.jpeg",
-                        "crops":{
-                          "count":null,
-                          "edges":[
-                            {
-                              "node":{
-                                "__typename":"ImageFileCrop",
-                                "publicLocation":"https://img.br.de/6151c502-4a45-45fa-8255-7ea4372b3f4c.jpeg?rect=0%2C1%2C1920%2C1078",
-                                "width":1920,
-                                "height":1078,
-                                "id":"av:5ce43795ef839c001a3ed570|5ce43795ef839c001a3ed577"
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                "id":"av:5ce43795ef839c001a3ed572"
-              },
-              "slug":"bayern-neues-aus-den-regionen"
-            }
-          }
-        ],
+        "captionFiles":{
+          "count":0,
+          "edges":[
+
+          ]
+        },
         "itemOf":{
+          "count":1,
           "edges":[
             {
               "node":{
-                "__typename":"Programme",
+                "id":"av:5ca71fe6449cde001a66a9aa",
                 "title":"Weiter angespannte Situation in den Hochwasser-Gebieten",
                 "kicker":"Rundschau 18:30 | 21.05.2019",
-                "duration":1800,
-                "id":"av:5ca71fe6449cde001a66a9aa",
-                "teaserImages":{
-                  "edges":[
-                    {
-                      "node":{
-                        "__typename":"Image",
-                        "shortDescription":"Moderator Stefan Scheider im Rundschau-Studio",
-                        "copyright":"BR",
-                        "id":"av:5ce445ae90b44e001a257300"
-                      }
-                    }
-                  ]
-                },
-                "defaultTeaserImage":{
-                  "__typename":"Image",
-                  "shortDescription":"Moderator Stefan Scheider im Rundschau-Studio",
-                  "copyright":"BR",
-                  "imageFiles":{
-                    "edges":[
-                      {
-                        "node":{
-                          "__typename":"ImageFile",
-                          "id":"av:5ce445ae90b44e001a2572ff",
-                          "publicLocation":"https://img.br.de/afbd163f-64d7-4c2e-adcf-9d724f5371a2.jpeg",
-                          "crops":{
-                            "count":null,
-                            "edges":[
-                              {
-                                "node":{
-                                  "__typename":"ImageFileCrop",
-                                  "publicLocation":"https://img.br.de/afbd163f-64d7-4c2e-adcf-9d724f5371a2.jpeg?rect=0%2C1%2C1920%2C1078",
-                                  "width":1920,
-                                  "height":1078,
-                                  "id":"av:5ce445ae90b44e001a2572ff|5ce445af08165c001a342099"
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "id":"av:5ce445ae90b44e001a257300"
-                },
-                "slug":"rundschau-1830-21052019-weiter-angespannte-situation-in-den-hochwasser-gebieten",
-                "episodeOf":{
-                  "__typename":"Series",
-                  "title":"Rundschau",
-                  "kicker":"Rundschau 18.30 Uhr",
-                  "id":"av:584f4c183b467900117bf25f",
-                  "slug":"rundschau",
-                  "scheduleInfo":"Täglich um 16.00 Uhr und um 18.30 Uhr.",
-                  "subscribed":false
-                },
                 "broadcasts":{
                   "edges":[
                     {
@@ -942,37 +202,13 @@
                       }
                     }
                   ]
-                },
-                "publications":{
-                  "edges":[
-                    {
-                      "node":{
-                        "__typename":"BroadcastEvent",
-                        "publishedBy":{
-                          "__typename":"BroadcastService",
-                          "name":"BR Fernsehen",
-                          "id":"av:http://ard.de/ontologies/ard#BR_Fernsehen"
-                        },
-                        "id":"av:5ca71fe6449cde001a66a9aa|5ce4478f9f0801001a74c68c"
-                      }
-                    }
-                  ]
                 }
               }
             }
           ]
-        },
-        "relatedLinks":{
-          "edges":[
-
-          ]
-        },
-        "categories":{
-          "edges":[
-
-          ]
         }
-      }
+      },
+      "id":"Viewer:__VIEWER"
     }
   }
-]
+}

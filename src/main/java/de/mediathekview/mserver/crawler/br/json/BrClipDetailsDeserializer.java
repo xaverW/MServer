@@ -384,15 +384,14 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
      */
     switch (this.id.getType()) {
       case PROGRAMME:
-        Optional<JsonObject> episodeOfNode = getEpisodeOfNode(clipDetailRoot);
-        if (episodeOfNode.isPresent()) {
-          topic = getElementOfNode(episodeOfNode.get(), BrGraphQLElementNames.STRING_CLIP_TITLE.getName());
-        }
+        topic = JsonUtils.getAttributeAsString(clipDetailRoot, BrGraphQLElementNames.STRING_CLIP_KICKER.getName());
+        topic = trimDate(topic);
         break;
       case ITEM:
         Optional<JsonObject> itemOfNode = getItemOfNode(clipDetailRoot);
         if (itemOfNode.isPresent()) {
           topic = getElementOfNode(itemOfNode.get(), BrGraphQLElementNames.STRING_CLIP_KICKER.getName());
+          topic = trimDate(topic);
         }
         break;
 
@@ -421,7 +420,17 @@ public class BrClipDetailsDeserializer implements JsonDeserializer<Optional<Film
     return Optional.empty();
   }
 
-  @Nullable
+  private Optional<String> trimDate(Optional<String> topic) {
+    if (topic.isPresent()) {
+      String value = topic.get();
+      int index = value.lastIndexOf("|");
+      if (index > 0) {
+        return Optional.of(value.substring(0, index).trim());
+      }
+    }
+    return topic;
+  }
+
   private Optional<String> getElementOfNode(JsonObject node, final String elementName) {
 
     Optional<JsonPrimitive> titleElementOptional =
