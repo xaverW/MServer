@@ -12,9 +12,6 @@ import de.mediathekview.mserver.crawler.basic.AbstractCrawler;
 import de.mediathekview.mserver.crawler.br.BrGraphQLQueries;
 import de.mediathekview.mserver.crawler.br.data.BrID;
 import de.mediathekview.mserver.crawler.br.json.BrClipDetailsDeserializer;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.lang.reflect.Type;
 import java.net.URL;
 import java.util.Optional;
@@ -22,6 +19,8 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.RecursiveTask;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class BrGetClipDetailsTask extends RecursiveTask<Set<Film>> {
 
@@ -64,35 +63,40 @@ public class BrGetClipDetailsTask extends RecursiveTask<Set<Film>> {
         LOG,
         crawler,
         () -> {
-          final Type optionalFilmType = new TypeToken<Optional<Film>>() {}.getType();
-          final Gson gson =
-              new GsonBuilder()
-                  .registerTypeAdapter(
-                      optionalFilmType, new BrClipDetailsDeserializer(crawler, singleClipId))
-                  .create();
+          try {
+            final Type optionalFilmType = new TypeToken<Optional<Film>>() {}.getType();
+            final Gson gson =
+                new GsonBuilder()
+                    .registerTypeAdapter(
+                        optionalFilmType, new BrClipDetailsDeserializer(crawler, singleClipId))
+                    .create();
 
-          final Optional<URL> apiUrl =
-              crawler.getRuntimeConfig().getSingleCrawlerURL(CrawlerUrlType.BR_API_URL);
-          if (apiUrl.isPresent()) {
-            final String response =
-                WebAccessHelper.getJsonResultFromPostAccess(
-                    apiUrl.get(),
-                    BrGraphQLQueries.getQuery2GetClipDetails(singleClipId),
-                    config.getSocketTimeoutInSeconds());
+            final Optional<URL> apiUrl =
+                crawler.getRuntimeConfig().getSingleCrawlerURL(CrawlerUrlType.BR_API_URL);
+            if (apiUrl.isPresent()) {
+              final String response =
+                  WebAccessHelper.getJsonResultFromPostAccess(
+                      apiUrl.get(),
+                      BrGraphQLQueries.getQuery2GetClipDetails(singleClipId),
+                      config.getSocketTimeoutInSeconds());
 
-            if (!tryBrApiCall(gson, response, optionalFilmType)) {
-              crawler.incrementAndGetErrorCount();
-              crawler.updateProgress();
+              if (!tryBrApiCall(gson, response, optionalFilmType)) {
+                crawler.incrementAndGetErrorCount();
+                crawler.updateProgress();
+              }
+
+            } else {
+              crawler.printErrorMessage();
+              LOG.error("The BR Api URL wasn't set right.");
             }
-
-          } else {
-            crawler.printErrorMessage();
-            LOG.error("The BR Api URL wasn't set right.");
+          } catch (Exception e) {
+            LOG.error("BR Error: ", e);
           }
         });
   }
 
-  private boolean tryBrApiCall(final Gson gson, final String response, final Type optionalFilmType) {
+  private boolean tryBrApiCall(
+      final Gson gson, final String response, final Type optionalFilmType) {
     int countRetries = 0;
     do {
       try {
