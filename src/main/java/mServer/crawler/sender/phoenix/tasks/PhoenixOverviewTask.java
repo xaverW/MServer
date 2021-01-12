@@ -10,7 +10,7 @@ import mServer.crawler.sender.zdf.tasks.ZdfTaskBase;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.ws.rs.client.WebTarget;
+import jakarta.ws.rs.client.WebTarget;
 import java.lang.reflect.Type;
 import java.util.Collection;
 import java.util.Optional;

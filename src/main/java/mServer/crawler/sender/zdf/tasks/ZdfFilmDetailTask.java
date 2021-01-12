@@ -21,7 +21,7 @@ import mServer.crawler.sender.zdf.json.ZdfFilmDetailDeserializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.ws.rs.client.WebTarget;
+import jakarta.ws.rs.client.WebTarget;
 import java.lang.reflect.Type;
 import java.time.Duration;
 import java.time.LocalDateTime;

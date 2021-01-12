@@ -2,7 +2,7 @@ package mServer.crawler.sender.zdf.tasks;
 
 import java.util.Optional;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import javax.ws.rs.client.WebTarget;
+import jakarta.ws.rs.client.WebTarget;
 import mServer.crawler.sender.MediathekReader;
 import mServer.crawler.sender.base.AbstractRecursivConverterTask;
 import mServer.crawler.sender.base.CrawlerUrlDTO;

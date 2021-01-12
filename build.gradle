@@ -3,8 +3,9 @@ import org.apache.tools.ant.filters.ReplaceTokens
 import java.nio.file.Files
 
 plugins {
-    id "com.github.jk1.dependency-license-report" version "0.3.5"
-    id "org.sonarqube" version "2.7.1"
+    id "com.github.jk1.dependency-license-report" version "1.16"
+    id "org.sonarqube" version "3.0"
+    id 'org.openjfx.javafxplugin' version '0.0.9'
 }
 
 apply plugin: 'java'
@@ -13,8 +14,8 @@ apply plugin: 'maven'
 apply plugin: 'signing'
 apply from: "${project.rootDir}/gradle/eclipse.gradle"
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 15
+targetCompatibility = 15
 group = 'de.mediathekview'
 archivesBaseName = "MServer"
 version = '3.1.148'
@@ -121,26 +122,30 @@ tasks.withType(Test) {
 
 dependencies {
     compile 'de.mediathekview:MLib:3.0.6'
-    compile 'commons-net:commons-net:3.6'
-    compile 'org.apache.commons:commons-compress:1.18'
-    compile 'org.apache.commons:commons-lang3:3.9'
+    compile 'commons-net:commons-net:3.7.2'
+    compile 'org.apache.commons:commons-compress:1.20'
+    compile 'org.apache.commons:commons-lang3:3.11'
     compile 'org.tukaani:xz:1.8'
-    compile 'com.google.code.gson:gson:2.8.5'
-    compile 'org.glassfish.jersey.core:jersey-client:2.28'
-    compile 'org.glassfish.jersey.inject:jersey-hk2:2.28'
+    compile 'com.google.code.gson:gson:2.8.6'
+    compile 'org.glassfish.jersey.core:jersey-client:3.0.0'
+    compile 'org.glassfish.jersey.inject:jersey-hk2:3.0.0'
     compile 'com.sun.jersey:jersey-client:1.19.4'
-    compile 'com.squareup.okhttp3:okhttp:3.14.2'
-    compile 'org.jsoup:jsoup:1.12.1'
-    compile 'javax.activation:activation:1.1'
-    compile 'com.google.guava:guava:28.1-jre'
+    compile 'com.squareup.okhttp3:okhttp:4.9.0'
+    compile 'org.jsoup:jsoup:1.13.1'
+    compile 'javax.activation:activation:1.1.1'
+    compile 'com.google.guava:guava:30.1-jre'
+    compile 'org.apache.logging.log4j:log4j-core:2.14.0'
+    compile 'fm.void.jetm:jetm:1.2.3'
 
-    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.11.2'
-    compile group: 'fm.void.jetm', name: 'jetm', version: '1.2.3'
-
-    testCompile "junit:junit:4.12"
-    testCompile "org.mockito:mockito-core:2.+"
-    testCompile "com.squareup.okhttp3:mockwebserver:3.6.0"
+    testCompile "junit:junit:4.13.1"
+    testCompile "org.mockito:mockito-core:3.6.28"
+    testCompile "com.squareup.okhttp3:mockwebserver:4.9.0"
     testCompile "org.hamcrest:hamcrest-all:1.3"
+}
+
+javafx {
+    version = "15.0.1"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.media' ]
 }
 
 configurations.compile {
@@ -243,6 +248,7 @@ if (project.hasProperty('SONATYPE_USERNAME')) {
     }
 
     task javadocJar(type: Jar) {
+
         classifier = 'javadoc'
         from myJavadocs
     }
@@ -262,7 +268,7 @@ task updateVersion {
         Properties props = loadVersionProperties()
         def oldVersion = props.getProperty('VERSION')
         String buildDate = new Date().format('dd.MM.yyyy HH:mm:ss')
-        if (!oldVersion.equals(project.version)) {
+        if (oldVersion != project.version) {
             logger.lifecycle "==mserver======================"
             logger.lifecycle "Version: $project.version"
             logger.lifecycle "Baudatum: $buildDate"
@@ -277,7 +283,7 @@ task updateVersion {
 processResources.dependsOn updateVersion
 
 licenseReport {
-    outputDir = "build/Copyright/"
+    outputDir = rootProject.projectDir.toPath().resolve("build/Copyright/").toString()
     excludes = [':MSearch', 'MediathekView:MLib']
     configurations = ['compile']
 }

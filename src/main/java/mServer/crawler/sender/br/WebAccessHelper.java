@@ -12,10 +12,10 @@ package mServer.crawler.sender.br;
 import de.mediathekview.mlib.Const;
 import java.net.URL;
 
-import javax.ws.rs.client.Entity;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.client.Entity;
+import jakarta.ws.rs.client.WebTarget;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
 import mServer.crawler.FilmeSuchen;
 import mServer.crawler.RunSender;
