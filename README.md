@@ -6,7 +6,7 @@
 
 # MServer
 
-A bundle of crawlers, packed to a server for [MediathekView](https://github.com/mediathekview).
+MServer is a free open-source software that crawls the media libraries of the German-speaking public broadcasters and prepares them as a machine-readable list for clients such as [MediathekView](https://github.com/mediathekview).
 
 **Hint:** As MediathekView is a German software for the DACH tv
 stations ["Öffentlich-Rechtliche"](https://de.wikipedia.org/wiki/%C3%96ffentlich-rechtlicher_Rundfunk), many things like
@@ -20,6 +20,7 @@ feel free to create issues in English.
 - [Contributing Guide](#contributing-guide)
 - [Code of Conduct](#code-of-conduct)
 - [Repository structure](#repository-structure)
+- [Roadmap](#roadmap)
 
 ## Contributing Guide
 
