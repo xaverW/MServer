@@ -6,7 +6,7 @@
 
 # MServer
 
-MServer is a free open-source software that crawls the media libraries of the German-speaking public broadcasters and prepares them as a machine-readable list for clients such as [MediathekView](https://github.com/mediathekview).
+MServer is a free open-source software that crawls the media libraries of the German-speaking public broadcasters and prepares them as a machine-readable list for clients such as [MediathekView](https://github.com/mediathekview/MediathekView).
 
 **Hint:** As MediathekView is a German software for the DACH tv
 stations ["Öffentlich-Rechtliche"](https://de.wikipedia.org/wiki/%C3%96ffentlich-rechtlicher_Rundfunk), many things like
@@ -17,20 +17,23 @@ feel free to create issues in English.
 
 ## Table of Contents
 
-- [Contributing Guide](#contributing-guide)
-- [Code of Conduct](#code-of-conduct)
-- [Repository structure](#repository-structure)
-- [Roadmap](#roadmap)
+- [MServer](#mserver)
+  - [Table of Contents](#table-of-contents)
+  - [Contributing Guide](#contributing-guide)
+  - [Code of Conduct](#code-of-conduct)
+  - [Repository structure](#repository-structure)
+  - [Roadmap](#roadmap)
+  - [Architecture Overview](#architecture-overview)
 
 ## Contributing Guide
 
 If you want to contribute to the MServer read
-the [Contributing Guide](https://github.com/mediathekview/MServer/blob/develop/CONTRIBUTING.md).
+the [Contributing Guide](CONTRIBUTING.md).
 
 ## Code of Conduct
 
 This project and everyone participates in it is governed by the
-[MediathekView Code of Conduct](https://github.com/mediathekview/MServer/blob/develop/CODE_OF_CONDUCT.md). By
+[MediathekView Code of Conduct](CODE_OF_CONDUCT.md). By
 participating, you are expected to uphold this code. Please report unacceptable behavior to <info@mediathekview.de>.
 
 ## Repository structure
@@ -52,3 +55,7 @@ Our current roadmap is:
    configurable amount of checks the entries should be deleted. When to check the links should be configurable too.
 3. Implement the design of the step before.
 4. Split all crawlers to own services according to the concept of 2.
+
+## Architecture Overview
+
+For an architectural overview see [Architecture Overview](ARCHITECTURE_OVERVIEW.md)
