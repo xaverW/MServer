@@ -18,7 +18,8 @@ senderIncluded:
   #- NDR
   #- ORF
   #- ARTE_DE
-  - ARD
+   - KIKA
+
 
 # If set the server will be awake after the crawler run and restarts the run after the given amount.
 #schedules:
@@ -104,6 +105,7 @@ socketTimeoutInSeconds: 60
 
 crawlerURLs:
   BR_API_URL: https://proxy-base.master.mango.express/graphql
+  KIKA_API_URL: http://prod.kinderplayer.cdn.tvnext.tv
 
 
 #### Specific crawler configurations ####

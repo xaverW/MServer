@@ -69,6 +69,31 @@ public final class JsonUtils {
     return Optional.empty();
   }
 
+  public static Optional<String> getElementValueAsString(final JsonElement aJsonElement, final String... aElementIds) {
+    Optional<String> rs = Optional.empty();
+    try {
+      JsonObject aJsonObject = aJsonElement.getAsJsonObject();
+      for (int i = 0; i < aElementIds.length-1; i++) {
+        String elementId = aElementIds[i];
+        if (aJsonObject.has(elementId) && aJsonObject.get(elementId).isJsonObject()) {
+          aJsonObject = aJsonObject.getAsJsonObject(elementId);
+        } else {
+          aJsonObject = null;
+          break;
+        }
+      }
+      //
+      String elementId = aElementIds[aElementIds.length-1];
+      if (aJsonObject != null && aJsonObject.has(elementId) && !aJsonObject.get(elementId).isJsonNull()) {
+        rs =  Optional.of(aJsonObject.get(elementId).getAsString());
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    //
+    return rs;
+  }
+  
   /**
    * Checks if the {@link JsonElement} is a {@link JsonObject} and if it has all given elements and
    * if no element is null.

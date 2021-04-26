@@ -1,0 +1,200 @@
+{
+	"tracking": [
+		{
+			"type": "nielsen",
+			"data": {
+				"assetid": "VOID68d1ecc7-6c18-4f2d-8e33-01a644af3fd2",
+				"length": "240",
+				"nol_c0": "p0,0",
+				"nol_c2": "p2,N",
+				"nol_c5": "p5,https:\/\/www.kika.de\/animanimals\/sendungen\/videos\/video55156.html",
+				"nol_c7": "p7,VOID68d1ecc7-6c18-4f2d-8e33-01a644af3fd2",
+				"nol_c8": "p8,240",
+				"nol_c9": "p9,Animanimals_12. Pferd_2020-05-17T18:35:00",
+				"nol_c10": "p10,KiKA",
+				"nol_c12": "p12,Content",
+				"nol_c14": "p14,2020-05-17T18:35:00",
+				"nol_c15": "p15,431\/20\/004.167.948",
+				"nol_c16": "p16,Kinder",
+				"nol_c18": "p18,N",
+				"program": "Animanimals",
+				"title": "12. Pferd",
+				"type": "content"
+			},
+			"clientId": "{kikaClientId}",
+			"vcId": "{kikaVcId}",
+			"mode": "T",
+			"sfcode": "eu-uat",
+			"_raw": {
+				"data": {
+					"agf-tracking": {
+						"assetid": "video55156",
+						"length": "240",
+						"c0": "0",
+						"c2": "N",
+						"c5": "https:\/\/www.kika.de\/animanimals\/sendungen\/videos\/video55156.html",
+						"c7": "VOID68d1ecc7-6c18-4f2d-8e33-01a644af3fd2",
+						"c8": "240",
+						"c9": "Animanimals_12. Pferd_2020-05-17T18:35:00",
+						"c10": "KiKA",
+						"c12": "Content",
+						"c14": "2020-05-17T18:35:00",
+						"c15": "431\/20\/004.167.948",
+						"c16": "Kinder",
+						"c18": "N",
+						"program": "Animanimals",
+						"title": "Animanimals_12. Pferd_2020-05-17T18:35:00",
+						"type": "content"
+					}
+				}
+			}
+		},
+		{
+			"type": "ivw",
+			"data": {
+				"cp": "kika\/kikaninchen\/Video"
+			},
+			"_raw": {
+				"targetGroup": "3"
+			}
+		},
+		{
+			"type": "ati",
+			"data": {
+				"level1": null,
+				"screen": {
+					"level2": null,
+					"chapter1": null,
+					"chapter2": null,
+					"chapter3": null,
+					"page": "video55156"
+				},
+				"customVars": {
+					"1": null,
+					"2": null,
+					"3": null,
+					"4": 0,
+					"5": "[avPlayer]",
+					"6": null,
+					"7": "[kika.sendungen.sendereihen.a.animanimals.sendungen.videos]",
+					"8": "[video55156]",
+					"9": "[d529d39f%2Dd171%2D44b4%2Dbf83%2D40366cef1ed4]",
+					"10": "[12.%20Pferd]",
+					"11": "[2018.04.12T18%3A15]",
+					"12": "[2021.01.26T00%3A14]",
+					"13": "[video]",
+					"14": null,
+					"15": "[12.%20Pferd]",
+					"16": "[Animanimals]",
+					"17": 3,
+					"18": "[Ganze%20Sendung]",
+					"19": "[TV]",
+					"20": null
+				},
+				"customObject": {
+					"G1": null,
+					"G2": null,
+					"G3": null,
+					"G4": null,
+					"G5": null,
+					"G6": null,
+					"G7": null,
+					"G8": "KiKA",
+					"G9": null,
+					"G10": null
+				},
+				"richMedia": {
+					"mediaType": "video",
+					"playerId": null,
+					"mediaLevel2": null,
+					"mediaLabel": "video55156",
+					"mediaTheme1": "Animanimals",
+					"mediaTheme2": "12.%20Pferd%7CTV%7CZG03%7C2018.04.12T18%3A15",
+					"mediaTheme3": null,
+					"refreshDuration": null,
+					"isEmbedded": null,
+					"webdomain": "www.kika.de",
+					"duration": "240",
+					"broadcastMode": "clip"
+				}
+			}
+		}
+	],
+	"assets": [
+		{
+			"quality": "Video 2014 | MP4 Web S | 16:9 | 320x180",
+			"delivery": "progressive",
+			"url": "https:\/\/pmdgeokika-a.akamaihd.net\/mp4dyn\/6\/FCMS-68d1ecc7-6c18-4f2d-8e33-01a644af3fd2-c0fb86e38f5a_68.mp4"
+		},
+		{
+			"quality": "Video 2014 | MP4 Web M Mobil | 16:9 | 480x270",
+			"delivery": "progressive",
+			"url": "https:\/\/pmdgeokika-a.akamaihd.net\/mp4dyn\/6\/FCMS-68d1ecc7-6c18-4f2d-8e33-01a644af3fd2-3c3a2d2ca7c6_68.mp4"
+		},
+		{
+			"quality": "Video 2014 | MP4 Web M | 16:9 | 512x288",
+			"delivery": "progressive",
+			"url": "https:\/\/pmdgeokika-a.akamaihd.net\/mp4dyn\/6\/FCMS-68d1ecc7-6c18-4f2d-8e33-01a644af3fd2-2cc6c1c1f632_68.mp4"
+		},
+		{
+			"quality": "Video 2014 | MP4 Web L mobil  | 16:9 | 640x360",
+			"delivery": "progressive",
+			"url": "https:\/\/pmdgeokika-a.akamaihd.net\/mp4dyn\/6\/FCMS-68d1ecc7-6c18-4f2d-8e33-01a644af3fd2-6b00429f6b07_68.mp4"
+		},
+		{
+			"quality": "Video 2014 | MP4 Web L | 16:9 | 960x540",
+			"delivery": "progressive",
+			"url": "https:\/\/pmdgeokika-a.akamaihd.net\/mp4dyn\/6\/FCMS-68d1ecc7-6c18-4f2d-8e33-01a644af3fd2-31e0be270130_68.mp4"
+		},
+		{
+			"quality": "Video 2018 | MP4 720p25 | Web XL| 16:9 | 1280x720",
+			"delivery": "progressive",
+			"url": "https:\/\/pmdgeokika-a.akamaihd.net\/mp4dyn\/6\/FCMS-68d1ecc7-6c18-4f2d-8e33-01a644af3fd2-5a2c8da1cdb7_68.mp4"
+		},
+		{
+			"quality": "auto",
+			"delivery": "streaming",
+			"url": "https:\/\/kikageohls-vh.akamaihd.net\/i\/mp4dyn\/6\/VOID68d1ecc7-6c18-4f2d-8e33-01a644af3fd2.smil\/master.m3u8"
+		}
+	],
+	"hbbtvAssets": [
+		{
+			"quality": "Video 2014 | MP4 Web S | 16:9 | 320x180",
+			"delivery": "progressive",
+			"url": "https:\/\/pmdgeokika-a.akamaihd.net\/mp4dyn\/6\/FCMS-68d1ecc7-6c18-4f2d-8e33-01a644af3fd2-c0fb86e38f5a_68.mp4"
+		},
+		{
+			"quality": "Video 2014 | MP4 Web M Mobil | 16:9 | 480x270",
+			"delivery": "progressive",
+			"url": "https:\/\/pmdgeokika-a.akamaihd.net\/mp4dyn\/6\/FCMS-68d1ecc7-6c18-4f2d-8e33-01a644af3fd2-3c3a2d2ca7c6_68.mp4"
+		},
+		{
+			"quality": "Video 2014 | MP4 Web M | 16:9 | 512x288",
+			"delivery": "progressive",
+			"url": "https:\/\/pmdgeokika-a.akamaihd.net\/mp4dyn\/6\/FCMS-68d1ecc7-6c18-4f2d-8e33-01a644af3fd2-2cc6c1c1f632_68.mp4"
+		},
+		{
+			"quality": "Video 2014 | MP4 Web L mobil  | 16:9 | 640x360",
+			"delivery": "progressive",
+			"url": "https:\/\/pmdgeokika-a.akamaihd.net\/mp4dyn\/6\/FCMS-68d1ecc7-6c18-4f2d-8e33-01a644af3fd2-6b00429f6b07_68.mp4"
+		},
+		{
+			"quality": "Video 2014 | MP4 Web L | 16:9 | 960x540",
+			"delivery": "progressive",
+			"url": "https:\/\/pmdgeokika-a.akamaihd.net\/mp4dyn\/6\/FCMS-68d1ecc7-6c18-4f2d-8e33-01a644af3fd2-31e0be270130_68.mp4"
+		},
+		{
+			"quality": "Video 2018 | MP4 720p25 | Web XL| 16:9 | 1280x720",
+			"delivery": "progressive",
+			"url": "https:\/\/pmdgeokika-a.akamaihd.net\/mp4dyn\/6\/FCMS-68d1ecc7-6c18-4f2d-8e33-01a644af3fd2-5a2c8da1cdb7_68.mp4"
+		}
+	],
+	"additional": {
+		"closedCaption": {
+			"EBU-TT": "",
+			"WebVTT": ""
+		},
+		"fsk": 0,
+		"subtitle": false
+	}
+}

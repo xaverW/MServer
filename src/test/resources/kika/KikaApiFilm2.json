@@ -1,0 +1,185 @@
+{
+	"tracking": [
+		{
+			"type": "nielsen",
+			"data": {
+				"type": "content",
+				"assetid": "200608_chota_das_tigerjunge_ddb",
+				"program": "Das Dschungelbuch",
+				"title": "Das Dschungelbuch|Chota, das Tigerjunge|200608_chota_das_tigerjunge_ddb",
+				"length": "659",
+				"nol_c2": "p2,N",
+				"nol_c5": "p5,ZDFtivi",
+				"nol_c7": "p7,200608_chota_das_tigerjunge_ddb",
+				"nol_c8": "p8,659",
+				"nol_c9": "p9,Chota, das Tigerjunge",
+				"nol_c10": "p10,KiKA",
+				"nol_c12": "p12,Content",
+				"nol_c14": "p14,2021-03-25T17:35:00",
+				"nol_c15": "p15,DMB__1337899696",
+				"nol_c16": "p16,Das Dschungelbuch",
+				"nol_c18": "p18,N",
+				"nol_c19": "p19,ZDF|22.03.2021 08:35|24.06.2021 23:59|none|de|true"
+			},
+			"clientId": "{zdfClientId}",
+			"vcId": "{zdfVcId}",
+			"mode": "T",
+			"sfcode": "eu-uat",
+			"_raw": {
+				"data": {
+					"content": {
+						"type": "content",
+						"assetid": "200608_chota_das_tigerjunge_ddb",
+						"program": "Das Dschungelbuch",
+						"title": "Das Dschungelbuch|Chota, das Tigerjunge|200608_chota_das_tigerjunge_ddb",
+						"length": "659",
+						"nol_c2": "p2,N",
+						"nol_c5": "p5,ZDFtivi",
+						"nol_c7": "p7,200608_chota_das_tigerjunge_ddb",
+						"nol_c8": "p8,659",
+						"nol_c9": "p9,Chota, das Tigerjunge",
+						"nol_c10": "p10,KI.KA",
+						"nol_c12": "p12,Content",
+						"nol_c14": "p14,2021-03-26T11:10:00",
+						"nol_c15": "p15,561\/18974",
+						"nol_c16": "p16,Das Dschungelbuch",
+						"nol_c18": "p18,N",
+						"nol_c19": "p19,ZDF|22.03.2021 08:35|24.06.2021 23:59|none|de|true"
+					},
+					"addContent": {
+						"nol_c10": "p10,KiKA",
+						"nol_c14": "p14,2021-03-25T17:35:00",
+						"nol_c15": "p15,DMB__1337899696",
+						"nol_c19": "p19,ZDF|22.03.2021 08:35|24.06.2021 23:59|none|de|true"
+					}
+				}
+			}
+		},
+		{
+			"type": "ivw",
+			"data": {
+				"cp": "ZDFtivi\/Das_Dschungelbuch"
+			},
+			"_raw": {
+				"data": {
+					"st": "zdf",
+					"cp": "ZDFtivi\/Das_Dschungelbuch",
+					"sv": "ke",
+					"co": "episode\/Chota__das_Tigerjunge\/tivi_vcms_video_2035160"
+				}
+			}
+		},
+		{
+			"type": "ati",
+			"data": {
+				"level1": null,
+				"screen": {
+					"level2": null,
+					"chapter1": null,
+					"chapter2": null,
+					"chapter3": null,
+					"page": "12206"
+				},
+				"customVars": {
+					"1": null,
+					"2": null,
+					"3": null,
+					"4": 0,
+					"5": "[avPlayer]",
+					"6": null,
+					"7": null,
+					"8": "[12206]",
+					"9": null,
+					"10": null,
+					"11": null,
+					"12": "[0021.03.25T05:00]",
+					"13": "[video]",
+					"14": null,
+					"15": "[Chota, das Tigerjunge]",
+					"16": "[Das Dschungelbuch]",
+					"17": 5,
+					"18": null,
+					"19": null,
+					"20": null
+				},
+				"customObject": {
+					"G1": null,
+					"G2": null,
+					"G3": null,
+					"G4": null,
+					"G5": null,
+					"G6": null,
+					"G7": null,
+					"G8": "ZDF",
+					"G9": null,
+					"G10": null
+				},
+				"richMedia": {
+					"mediaType": "video",
+					"playerId": null,
+					"mediaLevel2": null,
+					"mediaLabel": "12206",
+					"mediaTheme1": "Das Dschungelbuch",
+					"mediaTheme2": "Chota, das Tigerjunge| |ZG5|0021.03.25T05:00",
+					"mediaTheme3": null,
+					"refreshDuration": null,
+					"isEmbedded": null,
+					"webdomain": null,
+					"duration": "660",
+					"broadcastMode": "clip"
+				}
+			}
+		}
+	],
+	"assets": [
+		{
+			"quality": "med like Hack Android Web XL",
+			"mimeType": "application\/x-mpegURL",
+			"delivery": "android-streaming",
+			"isAdaptive": true,
+			"url": "https:\/\/zdfvodde-vh.akamaihd.net\/i\/meta-files\/tivi\/smil\/m3u8\/200\/20\/06\/200608_chota_das_tigerjunge_ddb\/2\/200608_chota_das_tigerjunge_ddb.smil\/master.m3u8"
+		},
+		{
+			"quality": "high like Hack Android Web XL",
+			"mimeType": "application\/x-mpegURL",
+			"delivery": "android-streaming",
+			"isAdaptive": true,
+			"url": "https:\/\/zdfvodde-vh.akamaihd.net\/i\/meta-files\/tivi\/smil\/m3u8\/300\/20\/06\/200608_chota_das_tigerjunge_ddb\/2\/200608_chota_das_tigerjunge_ddb.smil\/master.m3u8"
+		},
+		{
+			"quality": "auto",
+			"mimeType": "application\/x-mpegURL",
+			"delivery": "streaming",
+			"isAdaptive": true,
+			"url": "https:\/\/zdfvodde-vh.akamaihd.net\/i\/meta-files\/tivi\/smil\/m3u8\/300\/20\/06\/200608_chota_das_tigerjunge_ddb\/2\/200608_chota_das_tigerjunge_ddb.smil\/master.m3u8"
+		}
+	],
+	"hbbtvAssets": [
+		{
+			"quality": "low",
+			"mimeType": "video\/mp4",
+			"delivery": "progressive",
+			"isAdaptive": false,
+			"url": "https:\/\/nrodlzdf-a.akamaihd.net\/de\/tivi\/20\/06\/200608_chota_das_tigerjunge_ddb\/2\/200608_chota_das_tigerjunge_ddb_508k_p9v15.mp4"
+		},
+		{
+			"quality": "high",
+			"mimeType": "video\/mp4",
+			"delivery": "progressive",
+			"isAdaptive": false,
+			"url": "https:\/\/nrodlzdf-a.akamaihd.net\/de\/tivi\/20\/06\/200608_chota_das_tigerjunge_ddb\/2\/200608_chota_das_tigerjunge_ddb_808k_p11v15.mp4"
+		},
+		{
+			"quality": "veryhigh",
+			"mimeType": "video\/mp4",
+			"delivery": "progressive",
+			"isAdaptive": false,
+			"url": "https:\/\/nrodlzdf-a.akamaihd.net\/de\/tivi\/20\/06\/200608_chota_das_tigerjunge_ddb\/2\/200608_chota_das_tigerjunge_ddb_1628k_p13v15.mp4"
+		}
+	],
+	"additional": {
+		"closedCaption": [],
+		"subtitle": false,
+		"fsk": "none"
+	}
+}
