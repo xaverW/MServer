@@ -18,6 +18,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutionException;
@@ -39,13 +40,16 @@ public abstract class AbstractZdfCrawler extends MediathekCrawler {
     try {
       final ZdfConfiguration configuration = loadConfiguration();
 
-      final ConcurrentLinkedQueue<CrawlerUrlDTO> shows
-        = new ConcurrentLinkedQueue<>(getDaysEntries(configuration));
+      final Set<CrawlerUrlDTO> shows = new HashSet<>(getDaysEntries(configuration));
+
+      if (CrawlerTool.loadLongMax()) {
+        shows.addAll(getTopicsEntries());
+      }
 
       Log.sysLog(getSendername() + " Anzahl: " + shows.size());
       meldungAddMax(shows.size());
 
-      return new ZdfFilmDetailTask(this, getApiUrlBase(), shows, configuration.getVideoAuthKey());
+      return new ZdfFilmDetailTask(this, getApiUrlBase(), new ConcurrentLinkedQueue<>(shows), configuration.getVideoAuthKey());
     } catch (final InterruptedException ex) {
       LOG.debug("{} crawler interrupted.", getSendername(), ex);
       Thread.currentThread().interrupt();
@@ -58,6 +62,10 @@ public abstract class AbstractZdfCrawler extends MediathekCrawler {
   protected ZdfConfiguration loadConfiguration() throws ExecutionException, InterruptedException {
     final ZdfIndexPageTask task = new ZdfIndexPageTask(this, getUrlBase(), jsoupConnection);
     return forkJoinPool.submit(task).get();
+  }
+
+  protected Queue<CrawlerUrlDTO> getTopicsEntries() throws ExecutionException, InterruptedException {
+    return new ConcurrentLinkedQueue<>();
   }
 
   protected abstract String getUrlBase();

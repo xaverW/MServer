@@ -12,6 +12,8 @@ public final class ZdfConstants {
 
   public static final String URL_HTML_DAY = URL_BASE + "/sendung-verpasst?airtimeDate=%s";
 
+  public static final String URL_TOPICS = URL_BASE + "/sendungen-a-z";
+
   /** Base url of the ZDF api. */
   public static final String URL_API_BASE = "https://api.zdf.de";
 
