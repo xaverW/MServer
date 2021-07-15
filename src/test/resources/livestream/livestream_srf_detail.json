@@ -1,0 +1,186 @@
+{
+    "chapterUrn": "urn:srf:video:c4927fcf-e1a0-0001-7edd-1ef01d441651",
+    "episode": {
+        "id": "fe907d73-08c2-4526-9fe4-625a486ed6e1",
+        "title": "SRF 1 Live",
+        "description": "SRF Live - E1/CH",
+        "publishedDate": "2013-09-16T13:11:04Z",
+        "imageUrl": "https://ws.srf.ch/asset/image/audio/d91bbe14-55dd-458c-bc88-963462972687/EPISODE_IMAGE"
+    },
+    "show": {
+        "id": "8d6d24fb-e3f4-4505-aa6b-cce391146cc4",
+        "vendor": "SRF",
+        "transmission": "TV",
+        "urn": "urn:srf:show:tv:8d6d24fb-e3f4-4505-aa6b-cce391146cc4",
+        "title": "SRF 1 Live",
+        "description": "SRF Live - E1/CH",
+        "imageUrl": "https://ws.srf.ch/asset/image/audio/d91bbe14-55dd-458c-bc88-963462972687/EPISODE_IMAGE",
+        "posterImageUrl": "https://ws.srf.ch/asset/image/audio/47484a44-1bb7-46b9-8c07-92a7e8a65623/POSTER.jpg",
+        "posterImageIsFallbackUrl": true,
+        "primaryChannelId": "23FFBE1B-65CE-4188-ADD2-C724186C2C9F",
+        "primaryChannelUrn": "urn:srf:channel:tv:23FFBE1B-65CE-4188-ADD2-C724186C2C9F"
+    },
+    "channel": {
+        "id": "23FFBE1B-65CE-4188-ADD2-C724186C2C9F",
+        "vendor": "SRF",
+        "urn": "urn:srf:channel:tv:23FFBE1B-65CE-4188-ADD2-C724186C2C9F",
+        "title": "SRF 1",
+        "imageUrl": "https://ws.srf.ch/asset/image/audio/d91bbe14-55dd-458c-bc88-963462972687/EPISODE_IMAGE",
+        "imageTitle": "Logo",
+        "transmission": "TV"
+    },
+    "chapterList": [
+        {
+            "id": "c4927fcf-e1a0-0001-7edd-1ef01d441651",
+            "mediaType": "VIDEO",
+            "vendor": "SRF",
+            "urn": "urn:srf:video:c4927fcf-e1a0-0001-7edd-1ef01d441651",
+            "title": "SRF 1 live",
+            "description": "SRF Live - E1/CH",
+            "imageUrl": "https://ws.srf.ch/asset/image/audio/d91bbe14-55dd-458c-bc88-963462972687/EPISODE_IMAGE",
+            "blockReason": "GEOBLOCK",
+            "type": "LIVESTREAM",
+            "date": "2013-03-14T08:26:21Z",
+            "duration": 0,
+            "playableAbroad": false,
+            "displayable": true,
+            "position": 0,
+            "noEmbed": false,
+            "analyticsData": {
+                "ns_st_ep": "Livestream",
+                "ns_st_ty": "Video",
+                "ns_st_ci": "c4927fcf-e1a0-0001-7edd-1ef01d441651",
+                "ns_st_el": "0",
+                "ns_st_cl": "0",
+                "ns_st_sl": "0",
+                "ns_st_tp": "1",
+                "ns_st_cn": "1",
+                "ns_st_ct": "vc13",
+                "ns_st_pn": "1"
+            },
+            "analyticsMetadata": {
+                "media_segment": "Livestream",
+                "media_type": "Video",
+                "media_segment_id": "c4927fcf-e1a0-0001-7edd-1ef01d441651",
+                "media_episode_length": "0",
+                "media_segment_length": "0",
+                "media_number_of_segment_selected": "1",
+                "media_number_of_segments_total": "1",
+                "media_duration_category": "infinit.livestream",
+                "media_is_geoblocked": "true",
+                "media_urn": "urn:srf:video:c4927fcf-e1a0-0001-7edd-1ef01d441651"
+            },
+            "resourceList": [
+                {
+                    "url": "https://srf1-euwe.akamaized.net/dea89424-61c5-40c1-8577-8e04ce1b0ade/srf1.ism/manifest(format=m3u8-aapl,encryption=cbcs-aapl,filter=nodvr)",
+                    "drmList": [
+                        {
+                            "type": "FAIRPLAY",
+                            "licenseUrl": "https://srg.live.ott.irdeto.com/licenseServer/streaming/v1/SRG/getckc?contentId=SRF1&keyId=c42bce3b-299b-4da1-a0a1-932b652f09bb",
+                            "certificateUrl": "https://srg.live.ott.irdeto.com/licenseServer/streaming/v1/SRG/getcertificate?applicationId=live"
+                        }
+                    ],
+                    "quality": "SD",
+                    "protocol": "HLS",
+                    "encoding": "H264",
+                    "mimeType": "application/x-mpegURL",
+                    "presentation": "DEFAULT",
+                    "streaming": "HLS",
+                    "dvr": false,
+                    "live": true,
+                    "mediaContainer": "MP4",
+                    "audioCodec": "AAC",
+                    "videoCodec": "H264",
+                    "tokenType": "NONE",
+                    "analyticsData": {
+                        "srg_mqual": "SD",
+                        "srg_mpres": "DEFAULT"
+                    },
+                    "analyticsMetadata": {
+                        "media_streaming_quality": "SD",
+                        "media_special_format": "DEFAULT",
+                        "media_url": "https://srf1-euwe.akamaized.net/dea89424-61c5-40c1-8577-8e04ce1b0ade/srf1.ism/manifest(format=m3u8-aapl,encryption=cbcs-aapl,filter=nodvr)"
+                    }
+                },
+                {
+                    "url": "https://srf1-euwe.akamaized.net/dea89424-61c5-40c1-8577-8e04ce1b0ade/srf1.ism/manifest(format=mpd-time-csf,encryption=cenc,filter=nodvr)",
+                    "drmList": [
+                        {
+                            "type": "PLAYREADY",
+                            "licenseUrl": "https://srg.live.ott.irdeto.com/licenseServer/playready/v1/SRG/license?contentId=SRF1"
+                        },
+                        {
+                            "type": "WIDEVINE",
+                            "licenseUrl": "https://srg.live.ott.irdeto.com/licenseServer/widevine/v1/SRG/license?contentId=SRF1"
+                        }
+                    ],
+                    "quality": "SD",
+                    "protocol": "DASH",
+                    "encoding": "H264",
+                    "mimeType": "application/dash+xml",
+                    "presentation": "DEFAULT",
+                    "streaming": "DASH",
+                    "dvr": false,
+                    "live": true,
+                    "mediaContainer": "MP4",
+                    "audioCodec": "AAC",
+                    "videoCodec": "H264",
+                    "tokenType": "NONE",
+                    "analyticsData": {
+                        "srg_mqual": "SD",
+                        "srg_mpres": "DEFAULT"
+                    },
+                    "analyticsMetadata": {
+                        "media_streaming_quality": "SD",
+                        "media_special_format": "DEFAULT",
+                        "media_url": "https://srf1-euwe.akamaized.net/dea89424-61c5-40c1-8577-8e04ce1b0ade/srf1.ism/manifest(format=mpd-time-csf,encryption=cenc,filter=nodvr)"
+                    }
+                }
+            ],
+            "aspectRatio": "16:9"
+        }
+    ],
+    "analyticsData": {
+        "srg_pr_id": "fe907d73-08c2-4526-9fe4-625a486ed6e1",
+        "srg_plid": "8d6d24fb-e3f4-4505-aa6b-cce391146cc4",
+        "ns_st_pl": "Livestream",
+        "ns_st_pr": "SRF 1 Live",
+        "ns_st_dt": "2013-09-16",
+        "ns_st_ddt": "2013-09-16",
+        "ns_st_tdt": "*null",
+        "ns_st_tm": "*null",
+        "ns_st_tep": "*null",
+        "ns_st_li": "1",
+        "ns_st_stc": "8001",
+        "ns_st_st": "SRF 1",
+        "ns_st_tpr": "8d6d24fb-e3f4-4505-aa6b-cce391146cc4",
+        "ns_st_en": "*null",
+        "ns_st_ge": "*null",
+        "ns_st_ia": "*null",
+        "ns_st_ce": "1",
+        "ns_st_cdm": "to",
+        "ns_st_cmt": "fc",
+        "srg_unit": "SRF",
+        "srg_wo": "0"
+    },
+    "analyticsMetadata": {
+        "media_episode_id": "fe907d73-08c2-4526-9fe4-625a486ed6e1",
+        "media_show_id": "8d6d24fb-e3f4-4505-aa6b-cce391146cc4",
+        "media_show": "Livestream",
+        "media_episode": "SRF 1 Live",
+        "media_is_livestream": "true",
+        "media_full_length": "full",
+        "media_enterprise_units": "SRF",
+        "media_is_web_only": "false",
+        "media_production_source": "produced.for.broadcasting",
+        "media_thumbnail": "https://ws.srf.ch/asset/image/audio/d91bbe14-55dd-458c-bc88-963462972687/EPISODE_IMAGE/scale/width/344",
+        "media_publication_date": "2013-09-16",
+        "media_publication_time": "13:11:04",
+        "media_publication_datetime": "2013-09-16T13:11:04Z",
+        "media_channel_id": "23FFBE1B-65CE-4188-ADD2-C724186C2C9F",
+        "media_channel_cs": "8001",
+        "media_channel_name": "SRF 1",
+        "media_since_publication_d": "2772",
+        "media_since_publication_h": "66545"
+    }
+}

@@ -23,6 +23,7 @@ import de.mediathekview.mserver.crawler.dw.DwCrawler;
 import de.mediathekview.mserver.crawler.funk.FunkCrawler;
 import de.mediathekview.mserver.crawler.hr.HrCrawler;
 import de.mediathekview.mserver.crawler.kika.KikaCrawler;
+import de.mediathekview.mserver.crawler.livestream.LivestreamCrawler;
 import de.mediathekview.mserver.crawler.orf.OrfCrawler;
 import de.mediathekview.mserver.crawler.phoenix.PhoenixCrawler;
 import de.mediathekview.mserver.crawler.sr.SrCrawler;
@@ -485,6 +486,8 @@ public class CrawlerManager extends AbstractManager {
         Sender.SR, new SrCrawler(forkJoinPool, messageListeners, progressListeners, rootConfig));
     crawlerMap.put(
         Sender.ZDF, new ZdfCrawler(forkJoinPool, messageListeners, progressListeners, rootConfig));
+    crawlerMap.put(
+        Sender.LIVESTREAM, new LivestreamCrawler(forkJoinPool, messageListeners, progressListeners, rootConfig));
   }
 
   private void runCrawlers(final AbstractCrawler... aCrawlers) {

@@ -1,0 +1,62 @@
+{
+    "_baseUrl": "/appdata/static/player/",
+    "_baseAssetUrl": "/appdata/static/player/base/",
+    "_autoplay": "FORCE",
+    "_showSubtitelAtStart": false,
+    "_solaAnalyticsEnabled": true,
+    "_solaAnalyticsConfig": "/appdata/servlet/play/sola/83051238",
+    "_pixelConfig": [
+        {
+            "tracker": "AGF",
+            "startDayTime": 0,
+            "clipUrl": "https://zdf-hls-19.akamaized.net/hls/live/2016502/de/high/master.m3u8",
+            "clipType": "content",
+            "agfVCID": "b02",
+            "agfMetadata": "<uurl>https://appdata.ardmediathek.de/appdata/servlet/wicket/bookmarkable/de.swr.avp.cae.ard.webapp.page.redirect.ShortUrlRedirectPage?documentId=83051238&topRessort=tv</uurl><length>86400</length><title>phoenix_Livestream</title><livestream>yes</livestream><nol_c2>p2,N</nol_c2><nol_c5>p5,ARD Mediathek Mobil</nol_c5><nol_c7>p7,crid://phoenix.de/Livestream-phoenix</nol_c7><nol_c8>p8,86400</nol_c8><nol_c9>p9,Livestream</nol_c9><nol_c10>p10,phoenix</nol_c10><nol_c12>p12,Content</nol_c12><nol_c16>p16,Information</nol_c16><nol_c18>p18,Y</nol_c18><nol_c19>p19,WDR</nol_c19>",
+            "agfClipLength": "86400",
+            "agfGlobalParamsSDK": {
+                "clientid": "de-605508",
+                "apid": "P",
+                "sfcode": "eu",
+                "prod": "vc",
+                "vcid": "b02",
+                "apn": "ARD Mediathek Mobil"
+            },
+            "agfMetaDataSDK": {
+                "assetid": "https://zdf-hls-19.akamaized.net/hls/live/2016502/de/high/master.m3u8",
+                "type": "content",
+                "program": "phoenix live",
+                "title": "phoenix_Livestream",
+                "length": "86400",
+                "livestream": "yes",
+                "uurl": "https://appdata.ardmediathek.de/appdata/servlet/wicket/bookmarkable/de.swr.avp.cae.ard.webapp.page.redirect.ShortUrlRedirectPage?documentId=83051238&topRessort=tv",
+                "nol_c2": "p2,N",
+                "nol_c5": "p5,ARD Mediathek Mobil",
+                "nol_c7": "p7,crid://phoenix.de/Livestream-phoenix",
+                "nol_c8": "p8,86400",
+                "nol_c9": "p9,Livestream",
+                "nol_c10": "p10,phoenix",
+                "nol_c12": "p12,Content",
+                "nol_c16": "p16,Information",
+                "nol_c18": "p18,Y",
+                "nol_c19": "p19,WDR"
+            }
+        },
+        {
+            "tracker": "ATI",
+            "x3": "video",
+            "x5": "Phoenix",
+            "x6": "phoenix",
+            "x7": "phoenix+live",
+            "x8": "1",
+            "x9": "WDR",
+            "x10": "3",
+            "x14": "83051238",
+            "x20": "86400",
+            "clipUrl": "https://zdf-hls-19.akamaized.net/hls/live/2016502/de/high/master.m3u8",
+            "clipTitle": "phoenix live",
+            "countingUrl": "/appdata/servlet/count/83051238",
+            "startDayTime": 0
+        }
+    ]
+}

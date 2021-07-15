@@ -1,0 +1,347 @@
+{
+    "adition_advertising_query_string": "stype:live,scat:film-serie,scatid:2703833,spro:der-bulle-von-toelz,sproid:8434962,episodeid:14114812,duration:5658000,advertisingtags:",
+    "advertising_mapping": {
+        "live": {
+            "web": {
+                "sb": 4420063,
+                "tbar": 4420064,
+                "pre": 4420065,
+                "post": 4420066
+            },
+            "mob": {
+                "par": 4420067,
+                "pre": 4420221,
+                "post": 4420069
+            },
+            "app": {
+                "par": 4420070,
+                "pre": 4420071,
+                "post": 4420072
+            },
+            "smart": {
+                "pre": 4420073,
+                "post": 4420074
+            }
+        },
+        "vod": {
+            "web": {
+                "sb": 4420438,
+                "tbar": 4420439,
+                "pre": 4420440,
+                "post": 4420441
+            },
+            "mob": {
+                "par": 4420442,
+                "pre": 4420443,
+                "post": 4420444
+            },
+            "app": {
+                "par": 4420445,
+                "pre": 4420446,
+                "post": 4420447
+            },
+            "smart": {
+                "pre": 4420448,
+                "post": 4420449
+            }
+        }
+    },
+    "advertising_query_string": "stype=live&scat=film-serie&scatid=2703833&spro=der-bulle-von-toelz&sproid=8434962&episodeid=14114812&duration=5658000&advertisingtags=",
+    "channel_restart_url_android": null,
+    "channel_reel": "orf2",
+    "encrypted_id": "ODg3NjMyNGpzaGpkNzI5M2t0ZDE0MTE0ODEy",
+    "end": "2021-04-18T01:47:53+02:00",
+    "exact_duration": 5658000,
+    "extra_headline": null,
+    "genre_title": "Film & Serie",
+    "right": "austria",
+    "focus": false,
+    "channel_restart_url_hbbtv": null,
+    "headline": "Der Bulle von Tölz - Tod auf Tournee",
+    "id": 14114812,
+    "channel_restart_url_ios": null,
+    "gmf_merged_content": false,
+    "is_oegs": false,
+    "is_rerun": false,
+    "special": false,
+    "SSA": {
+        "cliptype": "live",
+        "videoid": 14114812,
+        "videopartid": "1_1",
+        "videocategory": "Film-Serie",
+        "videotitle": "Der-Bulle-von-Toelz-Tod-auf-Tournee",
+        "videoduration": null,
+        "episodeduration": 0,
+        "episodeid": 14114812,
+        "airdate": "2021-04-18T00:13:35+02:00",
+        "clipreleasetime": "2021-04-18T00:13:35+02:00",
+        "programname": "Der-Bulle-von-Toelz",
+        "channel": "orf2"
+    },
+    "oewa_base_path": "Redcont/KulturUndFreizeit/FilmUndKino",
+    "profile_title": "Der Bulle von Tölz",
+    "related_episode_growing": false,
+    "related_episode_segments_count": 0,
+    "release_date": "2021-04-18T00:13:35+02:00",
+    "restart": false,
+    "share_body": "https://tvthek.orf.at/live/Der-Bulle-von-Toelz-Tod-auf-Tournee/14114812",
+    "share_subject": "Livestream - Der Bulle von Tölz - Tod auf Tournee vom 18.04.2021 um 00.13 Uhr",
+    "show_display_ads": true,
+    "show_instream_ads": true,
+    "sources": {
+        "hls": [
+            {
+                "quality_key": "Q0A",
+                "quality_description": "Sehr niedrig",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q0a/manifest.m3u8",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q1A",
+                "quality_description": "Niedrig",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q1a/manifest.m3u8",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q4A",
+                "quality_description": "Mittel",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q4a/manifest.m3u8",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q6A",
+                "quality_description": "Hoch",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q6a/manifest.m3u8",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q8C",
+                "quality_description": "Sehr hoch",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q8c/manifest.m3u8",
+                "isUHD": false
+            },
+            {
+                "quality_key": "QXA",
+                "quality_description": "Adaptiv",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/qxa/manifest.m3u8",
+                "isUHD": false
+            },
+            {
+                "quality_key": "QXB",
+                "quality_description": "Adaptiv",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/qxb/manifest.m3u8",
+                "isUHD": false
+            }
+        ],
+        "hds": [
+            {
+                "quality_key": "Q0A",
+                "quality_description": "Sehr niedrig",
+                "src": "http://orf2.orfstg.cdn.ors.at/out/u/orf2/q0a/manifest.f4m",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q1A",
+                "quality_description": "Niedrig",
+                "src": "http://orf2.orfstg.cdn.ors.at/out/u/orf2/q1a/manifest.f4m",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q4A",
+                "quality_description": "Mittel",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q4a/manifest.f4m",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q6A",
+                "quality_description": "Hoch",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q6a/manifest.f4m",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q8C",
+                "quality_description": "Sehr hoch",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q8c/manifest.f4m",
+                "isUHD": false
+            },
+            {
+                "quality_key": "QXA",
+                "quality_description": "Adaptiv",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/qxa/manifest.f4m",
+                "isUHD": false
+            },
+            {
+                "quality_key": "QXB",
+                "quality_description": "Adaptiv",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/qxb/manifest.f4m",
+                "isUHD": false
+            }
+        ],
+        "dash": [
+            {
+                "quality_key": "Q0A",
+                "quality_description": "Sehr niedrig",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q0a/manifest.mpd",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q1A",
+                "quality_description": "Niedrig",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q1a/manifest.mpd",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q4A",
+                "quality_description": "Mittel",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q4a/manifest.mpd",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q6A",
+                "quality_description": "Hoch",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q6a/manifest.mpd",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q8C",
+                "quality_description": "Sehr hoch",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q8c/manifest.mpd",
+                "isUHD": false
+            },
+            {
+                "quality_key": "QXA",
+                "quality_description": "Adaptiv",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/qxa/manifest.mpd",
+                "isUHD": false
+            },
+            {
+                "quality_key": "QXB",
+                "quality_description": "Adaptiv",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/qxb/manifest.mpd",
+                "isUHD": false
+            }
+        ],
+        "smooth": [
+            {
+                "quality_key": "Q0A",
+                "quality_description": "Sehr niedrig",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q0a/manifest.ism/Manifest",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q1A",
+                "quality_description": "Niedrig",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q1a/manifest.ism/Manifest",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q4A",
+                "quality_description": "Mittel",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q4a/manifest.ism/Manifest",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q6A",
+                "quality_description": "Hoch",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q6a/manifest.ism/Manifest",
+                "isUHD": false
+            },
+            {
+                "quality_key": "Q8C",
+                "quality_description": "Sehr hoch",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/q8c/manifest.ism/Manifest",
+                "isUHD": false
+            },
+            {
+                "quality_key": "QXA",
+                "quality_description": "Adaptiv",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/qxa/manifest.ism/Manifest",
+                "isUHD": false
+            },
+            {
+                "quality_key": "QXB",
+                "quality_description": "Adaptiv",
+                "src": "https://orf2.mdn.ors.at/out/u/orf2/qxb/manifest.ism/Manifest",
+                "isUHD": false
+            }
+        ]
+    },
+    "start": "2021-04-18T00:13:35+02:00",
+    "sub_headline": "Film & Serie | Der Bulle von Tölz",
+    "title": "Der Bulle von Tölz - Tod auf Tournee",
+    "uhd": false,
+    "updated_at": "2021-04-17T14:22:52+02:00",
+    "videobumper": {
+        "prevideobumper": {
+            "active": false,
+            "sources": {
+                "hls": [],
+                "hds": [],
+                "smooth": [],
+                "progressive_download": []
+            }
+        },
+        "postvideobumper": {
+            "active": false,
+            "sources": {
+                "hls": [],
+                "hds": [],
+                "smooth": [],
+                "progressive_download": []
+            }
+        }
+    },
+    "_links": {
+        "self": {
+            "href": "https://api-tvthek.orf.at/api/v4.1/livestream/14114812"
+        },
+        "channel": {
+            "href": "https://api-tvthek.orf.at/api/v4.1/channel/1181"
+        },
+        "profile": {
+            "href": "https://api-tvthek.orf.at/api/v4.1/profile/8434962"
+        },
+        "tags": {
+            "href": "https://api-tvthek.orf.at/api/v4.1/livestream/14114812/tags"
+        },
+        "advertising_tags": {
+            "href": "https://api-tvthek.orf.at/api/v4.1/livestream/14114812/advertising/tags"
+        },
+        "links": {
+            "href": "https://api-tvthek.orf.at/api/v4.1/livestream/14114812/links"
+        },
+        "image": {
+            "href": "https://api-tvthek.orf.at/api/v4.1/media/13156"
+        },
+        "playlist": {
+            "href": "https://api-tvthek.orf.at/api/v4.1/livestream/14114812/playlist"
+        },
+        "dds_item": {
+            "href": "https://api-tvthek.orf.at/api/v4.1/dds/ddsitem/194488"
+        }
+    },
+    "_embedded": {
+        "image": {
+            "public_urls": {
+                "highlight_teaser": {
+                    "url": "http://api-tvthek.orf.at/uploads/media/profiles/0001/14/thumb_13156_profiles_highlight_teaser.jpeg"
+                },
+                "player": {
+                    "url": "http://api-tvthek.orf.at/uploads/media/profiles/0001/14/thumb_13156_profiles_player.jpeg"
+                },
+                "list": {
+                    "url": "http://api-tvthek.orf.at/uploads/media/profiles/0001/14/thumb_13156_profiles_list.jpeg"
+                },
+                "carousel": {
+                    "url": "http://api-tvthek.orf.at/uploads/media/profiles/0001/14/thumb_13156_profiles_carousel.jpeg"
+                },
+                "small": {
+                    "url": "http://api-tvthek.orf.at/uploads/media/profiles/0001/14/thumb_13156_profiles_small.jpeg"
+                },
+                "reference": {
+                    "url": "http://api-tvthek.orf.at/uploads/media/profiles/0001/14/a14cb2877d78f9153c4ae51b352072abd600fe3b.jpeg"
+                }
+            }
+        }
+    }
+}

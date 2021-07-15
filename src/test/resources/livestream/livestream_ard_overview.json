@@ -1,0 +1,2010 @@
+{
+    "typ": "Page",
+    "titel": "TV-Livestreams",
+    "cssClasses": [],
+    "cssResources": [],
+    "navigation": [
+        {
+            "typ": "NavigationsEintrag",
+            "navTyp": "Uebersicht",
+            "titel": "Start",
+            "seite": {
+                "titel": "Start",
+                "url": "https://appdata.ardmediathek.de/appdata/servlet/tv?json",
+                "external": false
+            },
+            "aktiv": false,
+            "unterEintraege": []
+        },
+        {
+            "typ": "NavigationsEintrag",
+            "navTyp": "Uebersicht",
+            "titel": "Radio-Livestreams",
+            "seite": {
+                "titel": "Radio-Livestreams",
+                "url": "https://appdata.ardmediathek.de/appdata/servlet/radio/live?json",
+                "external": false
+            },
+            "aktiv": false,
+            "unterEintraege": []
+        },
+        {
+            "typ": "NavigationsEintrag",
+            "navTyp": "TechnicalLink",
+            "titel": "Sonstiges",
+            "seite": {
+                "titel": "Sonstiges",
+                "url": "https://appdata.ardmediathek.de/appdata/#??json=",
+                "external": false
+            },
+            "aktiv": false,
+            "unterEintraege": [
+                {
+                    "typ": "NavigationsEintrag",
+                    "navTyp": "Uebersicht",
+                    "titel": "Meine ARD",
+                    "seite": {
+                        "titel": "Meine ARD",
+                        "url": "https://appdata.ardmediathek.de/appdata/servlet/merkliste?json",
+                        "external": false
+                    },
+                    "aktiv": false,
+                    "unterEintraege": [],
+                    "cssKlassen": [
+                        "playlistNavigationEntry"
+                    ]
+                },
+                {
+                    "typ": "NavigationsEintrag",
+                    "navTyp": "Uebersicht",
+                    "titel": "Datenschutz",
+                    "seite": {
+                        "titel": "Datenschutz",
+                        "url": "https://appdata.ardmediathek.de/appdata/servlet/-/datenschutz?json",
+                        "external": false
+                    },
+                    "aktiv": false,
+                    "unterEintraege": [],
+                    "cssKlassen": [
+                        "informative"
+                    ]
+                },
+                {
+                    "typ": "NavigationsEintrag",
+                    "navTyp": "Uebersicht",
+                    "titel": "Impressum",
+                    "seite": {
+                        "titel": "Impressum",
+                        "url": "https://appdata.ardmediathek.de/appdata/servlet/-/impressum?json",
+                        "external": false
+                    },
+                    "aktiv": false,
+                    "unterEintraege": [],
+                    "cssKlassen": [
+                        "informative"
+                    ]
+                },
+                {
+                    "typ": "NavigationsEintrag",
+                    "navTyp": "Uebersicht",
+                    "titel": "Einstellungen",
+                    "seite": {
+                        "titel": "Einstellungen",
+                        "url": "https://appdata.ardmediathek.de/appdata/#showSettings??json=",
+                        "external": false
+                    },
+                    "aktiv": false,
+                    "unterEintraege": [],
+                    "cssKlassen": [
+                        "settings",
+                        "ui-icon-gear"
+                    ]
+                },
+                {
+                    "typ": "NavigationsEintrag",
+                    "navTyp": "Uebersicht",
+                    "titel": "Hilfe",
+                    "seite": {
+                        "titel": "Hilfe",
+                        "url": "https://appdata.ardmediathek.de/appdata/servlet/-/hilfe?json",
+                        "external": false
+                    },
+                    "aktiv": false,
+                    "unterEintraege": [],
+                    "cssKlassen": [
+                        "settings",
+                        "ui-icon-info"
+                    ]
+                },
+                {
+                    "typ": "NavigationsEintrag",
+                    "navTyp": "Uebersicht",
+                    "titel": "Kontakt",
+                    "seite": {
+                        "titel": "Kontakt",
+                        "url": "https://appdata.ardmediathek.de/appdata/servlet/-/kontakt?json",
+                        "external": false
+                    },
+                    "aktiv": false,
+                    "unterEintraege": [],
+                    "cssKlassen": [
+                        "settings",
+                        "ui-icon-mail"
+                    ]
+                }
+            ]
+        }
+    ],
+    "sections": [
+        {
+            "typ": "Section",
+            "id": "0section",
+            "panelGroesse": "A",
+            "modCons": [
+                {
+                    "typ": "ModCon",
+                    "id": "0modCon",
+                    "titel": "",
+                    "mods": [
+                        {
+                            "typ": "Mod",
+                            "id": "sender",
+                            "titel": "",
+                            "externeId": "sender",
+                            "modulConfig": {
+                                "typ": "ModSenderConf",
+                                "zeigeAvIcons": false,
+                                "teaserGroesse": "A"
+                            },
+                            "inhalte": [
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/21/54/24/10/555337067/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": ""
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "ARD-alpha Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21542408?bcastId=21542412&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/21542408",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21542408?topRessort=tv&bcastId=21542412&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=ARD-alpha%20Livestream}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/21/28/80/98/555337067/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "ARTE Logo, Quelle: Arte"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "ARTE Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21200504?bcastId=21200502&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/21200504",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21200504?topRessort=tv&bcastId=21200502&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=ARTE%20Livestream}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/36/04/07/56/-1774185891/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "ARTE Logo, Quelle: Arte"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "ARTE Livestream französisch",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/36040754?bcastId=21200502&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/36040754",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/36040754?topRessort=tv&bcastId=21200502&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=ARTE%20Livestream%20franz%C3%B6sisch}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/21/53/67/20/1780504990/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": ""
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "BR Fernsehen Nord",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21536390?bcastId=21534364&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/21536390",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21536390?topRessort=tv&bcastId=21534364&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=BR%20Fernsehen%20Nord}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/21/53/67/22/-295433861/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": ""
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "BR Fernsehen Süd",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21536446?bcastId=21534364&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/21536446",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21536446?topRessort=tv&bcastId=21534364&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=BR%20Fernsehen%20S%C3%BCd}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/21/52/09/32/-2062574680/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "DasErste Logo, Quelle: DasErste"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "Das Erste",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21520924?bcastId=21520934&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/21520924",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21520924?topRessort=tv&bcastId=21520934&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=Das%20Erste}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/35/28/30/80/2121327408/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "Deutsche Welle (DW), Quelle: Deutsche Welle"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "Deutsche Welle (DW) - Die mediale Stimme Deutschlands",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/35283076?bcastId=35283082&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/35283076",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/35283076?topRessort=tv&bcastId=35283082&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=Deutsche%20Welle%20%28DW%29%20-%20Die%20mediale%20Stimme%20Deutschlands}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/17/30/14/10/-2114473875/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "Logo hr Fernsehen, Quelle: hr"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "hr-fernsehen",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/17301408?bcastId=17301400&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/17301408",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/17301408?topRessort=tv&bcastId=17301400&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=hr-fernsehen}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/29/02/60/50/-1852531467/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "KiKa Logo, Quelle: KiKa"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "KiKA Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/29026312?bcastId=29026018&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/29026312",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/29026312?topRessort=tv&bcastId=29026018&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=KiKA%20Livestream}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/79/55/65/58/616112114/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "MDR Fernsehen Sachsen",
+                                            "alt": "MDR Fernsehen, Quelle: MITTELDEUTSCHER RUNDFUNK"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "MDR Fernsehen Sachsen",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/79556550?bcastId=79556546&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/79556550",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/79556550?topRessort=tv&bcastId=79556546&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=MDR%20Fernsehen%20Sachsen}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/79/55/65/44/616112114/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "MDR Fernsehen Sachsen-Anhalt",
+                                            "alt": "MDR Fernsehen, Quelle: MITTELDEUTSCHER RUNDFUNK"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "MDR Fernsehen Sachsen-Anhalt",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/79556536?bcastId=79556532&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/79556536",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/79556536?topRessort=tv&bcastId=79556532&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=MDR%20Fernsehen%20Sachsen-Anhalt}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/79/55/65/30/616112114/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "MDR Fernsehen Thüringen",
+                                            "alt": "MDR Fernsehen, Quelle: MITTELDEUTSCHER RUNDFUNK"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "MDR Fernsehen Thüringen",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/79556522?bcastId=79556518&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/79556522",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/79556522?topRessort=tv&bcastId=79556518&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=MDR%20Fernsehen%20Th%C3%BCringen}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/74/35/19/04/-2114473875/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "NDR Fernsehen Hamburg - Standbild",
+                                            "alt": "NDR Fernsehen Hamburg, Quelle: NDR"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "NDR Fernsehen Hamburg",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/74351900?bcastId=68615936&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/74351900",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/74351900?topRessort=tv&bcastId=68615936&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=NDR%20Fernsehen%20Hamburg}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/80/79/40/98/-295433861/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "NDR Fernsehen Mecklenburg-Vorpommern - Standbild",
+                                            "alt": "NDR Fernsehen Mecklenburg-Vorpommern, Quelle: NDR"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "NDR Fernsehen Mecklenburg-Vorpommern",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/80794094?bcastId=68615988&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/80794094",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/80794094?topRessort=tv&bcastId=68615988&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=NDR%20Fernsehen%20Mecklenburg-Vorpommern}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/68/58/61/20/-1774185891/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "NDR Fernsehen Niedersachsen - Standbild",
+                                            "alt": "NDR - Das Beste am Norden, Quelle: NDR"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "NDR Fernsehen",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/68586116?bcastId=68586106&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/68586116",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/68586116?topRessort=tv&bcastId=68586106&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=NDR%20Fernsehen}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/68/61/59/82/-1774185891/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "Livestream: NDR Fernsehen Schleswig-Holstein - Standbild",
+                                            "alt": "NDR - Das Beste am Norden, Quelle: NDR"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "NDR Fernsehen Schleswig-Holstein",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/68615978?bcastId=68615964&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/68615978",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/68615978?topRessort=tv&bcastId=68615964&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=NDR%20Fernsehen%20Schleswig-Holstein}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/43/97/89/12/497678000/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "ONE im Livestream - Standbild",
+                                            "alt": "ONE Livestream, Quelle: wdr"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "ONE im Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/36089960?bcastId=3540670&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/36089960",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/36089960?topRessort=tv&bcastId=3540670&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=ONE%20im%20Livestream}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/83/05/12/42/2121327408/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "phoenix live - Standbild",
+                                            "alt": "phoenix-Logo, Quelle: phoenix"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "phoenix live",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/83051238?bcastId=83019244&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/83051238",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/83051238?topRessort=tv&bcastId=83019244&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=phoenix%20live}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/34/05/00/30/-2114473875/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "rbb Fernsehen Berlin - Standbild",
+                                            "alt": "Logo: rbb Fernsehen, Quelle: rbb, Quelle: Rundfunk Berlin-Brandenburg"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "rbb Fernsehen Berlin",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/34050018?bcastId=8256334&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "bewe"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/34050018",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/34050018?topRessort=tv&bcastId=8256334&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=rbb%20Fernsehen%20Berlin}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/34/93/42/58/-295433861/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "rbb Fernsehen Brandenburg - Standbild",
+                                            "alt": "Logo: rbb Fernsehen, Quelle: rbb, Quelle: Rundfunk Berlin-Brandenburg"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "rbb Fernsehen Brandenburg",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/34934242?bcastId=8256334&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "bewe"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/34934242",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/34934242?topRessort=tv&bcastId=8256334&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=rbb%20Fernsehen%20Brandenburg}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/29/91/02/24/-1774185891/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "SR Livestream - Standbild",
+                                            "alt": "Logo des SR Fernsehen, Quelle: SR"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "SR Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/22496146?bcastId=22496138&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/22496146",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/22496146?topRessort=tv&bcastId=22496138&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=SR%20Livestream}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/55/80/62/54/-1774185891/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "SWR Logo, Quelle: SWR"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "SWR Fernsehen Baden-Württemberg",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/22709680?bcastId=78097938&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "bewe"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/22709680",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/22709680?topRessort=tv&bcastId=78097938&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=SWR%20Fernsehen%20Baden-W%C3%BCrttemberg}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/55/80/63/84/-1774185891/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "SWR Logo, Quelle: SWR"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "SWR Fernsehen Rheinland-Pfalz",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/22709652?bcastId=78097946&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "bewe"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/22709652",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/22709652?topRessort=tv&bcastId=78097946&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=SWR%20Fernsehen%20Rheinland-Pfalz}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/31/49/31/92/-295433861/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "tagesschau Livestream - Standbild",
+                                            "alt": "tagesschau, Quelle: tagesschau"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "tagesschau24-Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/31493188?bcastId=31493180&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/31493188",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/31493188?topRessort=tv&bcastId=31493180&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=tagesschau24-Livestream}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/33/35/90/44/2121327408/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "WDR Fernsehen, Quelle: WDR"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "WDR Fernsehen im Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/43854900?bcastId=28849966&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/43854900",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/43854900?topRessort=tv&bcastId=28849966&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=WDR%20Fernsehen%20im%20Livestream}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/24/12/40/78/-2114473875/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "3sat Logo, Quelle: 3sat"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "3sat Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/24127206?bcastId=24124076&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/24127206",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/24127206?topRessort=tv&bcastId=24124076&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=3sat%20Livestream}"
+                                        }
+                                    }
+                                }
+                            ],
+                            "buttons": [],
+                            "cssClasses": [
+                                "hybrid-fixed"
+                            ],
+                            "ignoriertAuf": []
+                        }
+                    ],
+                    "ignoriertAuf": []
+                }
+            ],
+            "ignoriertAuf": [],
+            "cssClasses": [
+                "hybrid-fixed"
+            ]
+        },
+        {
+            "typ": "Section",
+            "id": "0sectionmodmini",
+            "panelGroesse": "A",
+            "modCons": [
+                {
+                    "typ": "ModCon",
+                    "id": "0modConmodmini",
+                    "titel": "",
+                    "mods": [
+                        {
+                            "typ": "Mod",
+                            "id": "livestreams",
+                            "titel": "",
+                            "externeId": "livestreams",
+                            "modulConfig": {
+                                "typ": "ModMiniConf",
+                                "zeigeAvIcons": false,
+                                "teaserGroesse": "A",
+                                "isSlidebar": false
+                            },
+                            "inhalte": [
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/21/54/24/10/555337067/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": ""
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "ARD-alpha Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21542408?bcastId=21542412&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/21542408",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21542408?topRessort=tv&bcastId=21542412&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=ARD-alpha%20Livestream}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/21/28/80/98/555337067/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "ARTE Logo, Quelle: Arte"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "ARTE Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21200504?bcastId=21200502&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/21200504",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21200504?topRessort=tv&bcastId=21200502&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=ARTE%20Livestream}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/21/53/67/22/-295433861/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": ""
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "BR Fernsehen Süd",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21536446?bcastId=21534364&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/21536446",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21536446?topRessort=tv&bcastId=21534364&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=BR%20Fernsehen%20S%C3%BCd}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/21/52/09/32/-2062574680/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "DasErste Logo, Quelle: DasErste"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "Das Erste",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21520924?bcastId=21520934&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/21520924",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/21520924?topRessort=tv&bcastId=21520934&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=Das%20Erste}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/35/28/30/80/2121327408/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "Deutsche Welle (DW), Quelle: Deutsche Welle"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "Deutsche Welle (DW) - Die mediale Stimme Deutschlands",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/35283076?bcastId=35283082&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/35283076",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/35283076?topRessort=tv&bcastId=35283082&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=Deutsche%20Welle%20%28DW%29%20-%20Die%20mediale%20Stimme%20Deutschlands}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/17/30/14/10/-2114473875/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "Logo hr Fernsehen, Quelle: hr"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "hr-fernsehen",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/17301408?bcastId=17301400&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/17301408",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/17301408?topRessort=tv&bcastId=17301400&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=hr-fernsehen}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/29/02/60/50/-1852531467/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "KiKa Logo, Quelle: KiKa"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "KiKA Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/29026312?bcastId=29026018&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/29026312",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/29026312?topRessort=tv&bcastId=29026018&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=KiKA%20Livestream}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/79/55/65/58/616112114/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "MDR Fernsehen Sachsen",
+                                            "alt": "MDR Fernsehen, Quelle: MITTELDEUTSCHER RUNDFUNK"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "MDR Fernsehen Sachsen",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/79556550?bcastId=79556546&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/79556550",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/79556550?topRessort=tv&bcastId=79556546&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=MDR%20Fernsehen%20Sachsen}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/68/58/61/20/-1774185891/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "NDR Fernsehen Niedersachsen - Standbild",
+                                            "alt": "NDR - Das Beste am Norden, Quelle: NDR"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "NDR Fernsehen",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/68586116?bcastId=68586106&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/68586116",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/68586116?topRessort=tv&bcastId=68586106&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=NDR%20Fernsehen}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/43/97/89/12/497678000/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "ONE im Livestream - Standbild",
+                                            "alt": "ONE Livestream, Quelle: wdr"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "ONE im Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/36089960?bcastId=3540670&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/36089960",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/36089960?topRessort=tv&bcastId=3540670&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=ONE%20im%20Livestream}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/83/05/12/42/2121327408/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "phoenix live - Standbild",
+                                            "alt": "phoenix-Logo, Quelle: phoenix"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "phoenix live",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/83051238?bcastId=83019244&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/83051238",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/83051238?topRessort=tv&bcastId=83019244&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=phoenix%20live}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/34/93/42/58/-295433861/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "rbb Fernsehen Brandenburg - Standbild",
+                                            "alt": "Logo: rbb Fernsehen, Quelle: rbb, Quelle: Rundfunk Berlin-Brandenburg"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "rbb Fernsehen Brandenburg",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/34934242?bcastId=8256334&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "bewe"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/34934242",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/34934242?topRessort=tv&bcastId=8256334&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=rbb%20Fernsehen%20Brandenburg}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/29/91/02/24/-1774185891/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "SR Livestream - Standbild",
+                                            "alt": "Logo des SR Fernsehen, Quelle: SR"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "SR Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/22496146?bcastId=22496138&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/22496146",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/22496146?topRessort=tv&bcastId=22496138&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=SR%20Livestream}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/55/80/62/54/-1774185891/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "SWR Logo, Quelle: SWR"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "SWR Fernsehen Baden-Württemberg",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/22709680?bcastId=78097938&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "bewe"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/22709680",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/22709680?topRessort=tv&bcastId=78097938&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=SWR%20Fernsehen%20Baden-W%C3%BCrttemberg}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/31/49/31/92/-295433861/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "tagesschau Livestream - Standbild",
+                                            "alt": "tagesschau, Quelle: tagesschau"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "tagesschau24-Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/31493188?bcastId=31493180&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/31493188",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/31493188?topRessort=tv&bcastId=31493180&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=tagesschau24-Livestream}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/33/35/90/44/2121327408/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "WDR Fernsehen, Quelle: WDR"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "WDR Fernsehen im Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/43854900?bcastId=28849966&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/43854900",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/43854900?topRessort=tv&bcastId=28849966&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=WDR%20Fernsehen%20im%20Livestream}"
+                                        }
+                                    }
+                                },
+                                {
+                                    "typ": "Teaser",
+                                    "bilder": [
+                                        {
+                                            "schemaUrl": "https://img.ardmediathek.de/standard/00/24/12/40/78/-2114473875/16x9/##width##?mandant=ard",
+                                            "initUrl": "https://appdata.ardmediathek.de/appdata/static/img/base/spacer/16.png",
+                                            "title": "",
+                                            "alt": "3sat Logo, Quelle: 3sat"
+                                        }
+                                    ],
+                                    "inhaltsDachzeile": "",
+                                    "dachzeile": "",
+                                    "ueberschrift": "3sat Livestream",
+                                    "unterzeile": "",
+                                    "teaserText": "",
+                                    "link": {
+                                        "titel": "",
+                                        "url": "https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/24127206?bcastId=24124076&json&topRessort=tv",
+                                        "external": false
+                                    },
+                                    "teaserTyp": "PermanentLivestreamClip",
+                                    "avFormate": [],
+                                    "kennzeichen": [
+                                        "tv",
+                                        "video",
+                                        "geo"
+                                    ],
+                                    "pixel": {
+                                        "typ": "PixelInformationTeaser",
+                                        "xtPage": "TV/Live",
+                                        "xtChapter": "Live",
+                                        "countingUrl": {
+                                            "titel": "",
+                                            "url": "https://appdata.ardmediathek.de/appdata/servlet/count/24127206",
+                                            "external": true
+                                        },
+                                        "params": {
+                                            "xt_obj": "{href=https://appdata.ardmediathek.de/appdata/servlet/tv/liveplayer/24127206?topRessort=tv&bcastId=24124076&json, target=_self}",
+                                            "teasertracking": "{H=ardmediathek, C=3sat%20Livestream}"
+                                        }
+                                    }
+                                }
+                            ],
+                            "buttons": [],
+                            "cssClasses": [],
+                            "ignoriertAuf": []
+                        }
+                    ],
+                    "ignoriertAuf": []
+                }
+            ],
+            "ignoriertAuf": [],
+            "cssClasses": []
+        }
+    ],
+    "pixel": {
+        "typ": "PixelInformationPage",
+        "xtPage": "TV/Live",
+        "xtChapter": "Live",
+        "params": {
+            "xtKapitel": "Live",
+            "xtpageParams": "Alle+Sender",
+            "xtpage": "TV%2FLive"
+        },
+        "trackAgf": true,
+        "trackAti": true,
+        "trackIvw2": true
+    }
+}
